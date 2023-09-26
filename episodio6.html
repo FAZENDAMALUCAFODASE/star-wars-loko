@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Retorno dos Jedi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+        html::-webkit-scrollbar {
+        width: 10px;
+        }
+        html::-webkit-scrollbar-thumb {
+        border-radius: 16px;
+        background: #99999988;
+        }
+        html::-webkit-scrollbar-thumb:active {
+        background: #999999;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+            background-color:rgb(0, 0, 22) 
+        }
+    
+    body {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: medium;
+    }
+    
+    h1 {
+        color: #c9b715;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header{
+        background-color: rgb(1, 1, 52);
+    }
+    
+    .navbar {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 34px;
+    }
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+    }
+    
+    .navbar img {
+        margin-top: 0px;
+        max-width:150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        padding: 0 34px;
+    }
+    
+    a {
+        color: #e5da0b;
+        text-decoration: none
+    }
+    
+    li {
+        list-style: none;
+    }
+    .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    }
+    .nav-link {
+        transition: 0.5s ease;
+    }
+    .nav-link:hover {
+        color: darkred;
+        text-decoration: underline;
+    text-shadow: 0.5px 0.4px #FFFFaa;
+    }
+    .Titulo1 {
+        text-align: center;
+        font-size: auto;
+        font-family: sans-serif;
+    }
+
+    video {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        border: 1px solid #4e0101;
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+
+    .bar {
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .Punheti {
+        display: none;
+        cursor: pointer;
+    }
+    
+    @media (max-width:768px){
+        .Punheti {
+            display: block;
+        }
+        .Punheti.active .bar:nth-child(2){
+         opacity: 0;
+        }
+        .Punheti.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .Punheti.active .bar:nth-child(3){
+            transform: translateY(8px) rotate(-45);
+        }
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            border-radius: 0 0 20px 20px;
+            background-color: rgb(1, 1, 52);
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .nav-item{
+            margin: 16px 0;
+        }
+        .nav-menu:active {
+           left: 0;
+        }
+    } 
+    
+    p {
+        color: #c9b715;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .retorno{
+    transition: 0.5s;
+    text-align: center;
+}
+
+.retorno:hover{
+    color: #4e0101;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px #FFFFaa;
+}
+
+.foto img{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 700px;
+        margin: auto;
+        border: 3px solid #084602;
+        border-radius: 20px;
+    }
+ </style>   
+
+</head>
+<body>
+    <header style="
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #02450daa;
+  ">
+  <nav class="navbar">
+        <a href="index.html" class="logo">Star Wars</a>
+         <ul class="nav-menu">
+            <li class="nav-item" id="menu"> <a href="OrdemdosFIlmes.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                delete
+                </span>Não</a></li>
+             <li class="nav-item" id="menu"> <a href="personagens.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+             <li class="nav-item" id="menu"> <a href="https://twitter.com/i/status/1685046153291743232"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                star
+                </span>Surpresa</a></li>
+         </ul>
+           <div onclick="clicar()" id="punheti" class="Punheti">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </div>
+   </nav>
+  </header>
+
+<section  style="
+padding-top: 60px;"
+> 
+
+<h1 style="color: blue; font-size: 2rem; text-align: center; padding-top: 30px;">O Retorno Dos Jedi</h1>
+
+<div class="foto">
+    <img src="https://hqscomcafe.com.br/wp-content/uploads/2020/09/Frases-Star-Wars-episodio6-800x445.jpg" alt="">
+</div>
+
+<p>A história se passa aproximadamente um ano depois dos eventos de O Império Contra-Ataca. Luke Skywalker e seus amigos viajam para Tatooine e salvam seu amigo Han Solo do lorde do crime Jabba o Hutt. Enquanto isso, o Império Galático, sob a supervisão militar de Darth Vader, começou a construção de uma segunda Estrela da Morte, visando aniquilar a Aliança Rebelde. Como o Imperador Palpatine planeja supervisionar pessoalmente as etapas finais de sua construção, a Frota Rebelde dá início a um ataque em grande escala à Estrela da Morte, para evitar o término de sua construção e matar Palpatine, pondo efetivamente um fim ao Império. Neste meio tempo, Luke Skywalker, um líder rebelde e Cavaleiro Jedi, luta para resgatar Vader, um ex-Jedi que também é seu pai, de volta do lado sombrio da Força em um climático duelo final diante do maligno Imperador Palpatine.</p><br><br>
+
+<div class="foto">
+    <img src="https://img.quizur.com/f/img6038ca0a907549.43167807.jpg?lastEdited=1614334477" alt="">
+</div>
+
+<p>A história se passa aproximadamente um ano depois dos eventos de O Império Contra-Ataca. Luke Skywalker e seus amigos viajam para Tatooine e salvam seu amigo Han Solo do lorde do crime Jabba o Hutt. Enquanto isso, o Império Galático, sob a supervisão militar de Darth Vader, começou a construção de uma segunda Estrela da Morte, visando aniquilar a Aliança Rebelde. Como o Imperador Palpatine planeja supervisionar pessoalmente as etapas finais de sua construção, a Frota Rebelde dá início a um ataque em grande escala à Estrela da Morte, para evitar o término de sua construção e matar Palpatine, pondo efetivamente um fim ao Império. Neste meio tempo, Luke Skywalker, um líder rebelde e Cavaleiro Jedi, luta para resgatar Vader, um ex-Jedi que também é seu pai, de volta do lado sombrio da Força em um climático duelo final diante do maligno Imperador Palpatine.</p><br><br>
+
+<div class="foto">
+    <img src="https://qph.cf2.quoracdn.net/main-qimg-db06aca632a430351a2a742458e78ded-lq" alt="">
+</div>
+
+<p>Após resgatar Han Solo, a Aliança Rebelde, que recentemente havia obtido informações sobre o projeto para a nova Estrela da Morte, engendra um plano para sufocar a agenda imperial: estando o esqueleto metálico da nova Estrela da Morte ainda parcialmente construído e apenas ligeiramente protegido por um escudo defletor interplanetário, emitido através da lua de Endor, a partir da qual a estação semi-construída orbita, uma pequena equipa de assalto deverá supostamente passar o bloqueio planetário através de códigos imperiais fornecidos pela rede de espionagem Bothan, desativar a estação emissora do escudo defletor e aguardar a chegada da frota rebelde para finalizar a destruição da Estrela da Morte, antes de esta atingir o nível de funcionalidade para se auto-defender. Contudo, a Aliança Rebelde cai numa armadilha feita pelo próprio imperador, pois tanto a informação do estado atual da nova Estrela da Morte como os códigos de entrada na lua eram parcialmente falsos, com o objectivo de atrair a frota principal da aliança rebelde à sua destruição. Ainda assim, o pequeno transporte consegue passar o bloqueio e infiltrar-se na lua de Endor.</p><br><br>
+
+<div class="foto">
+    <img src="https://lumiere-a.akamaihd.net/v1/images/databank_ewok_01_169_747db03a.jpeg?region=0%2C49%2C1560%2C780" alt="">
+</div>
+
+<p>É lá que, os rebeldes conhecem os Ewoks(chatos pra carai), uma raça de seres semelhantes a pequenas ursos, com um estilo de vida ainda primitivo e organização social tribal. Contudo, os Ewoks mostrar-se-iam essenciais para a destruição da central emissora, inicialmente protegida por uma legião das melhores tropas imperiais, que, segundo o imperador, já aguardavam o assalto rebelde. Através de variadíssimas armadilhas e tácticas de emboscada, os nativos Ewoks, conseguem surpreender as fileiras imperiais e, juntamente com o pequeno exército rebelde, tomar a estação emissora do escudo defletor que é detonada de seguida.</p> <br><br>
+
+<div class="foto">
+    <img src="https://cdn.theplaylist.net/wp-content/uploads/2017/12/14225321/Lando-Calrissian-Jedi-Billy-Dee-Williams-750x400.jpg" alt="">
+</div>
+
+<p>Enquanto isso, a frota rebelde se encontrava no espaço próximo da lua de Endor, pronta a atacar a estação espacial desarmada, caindo em cheio na armadilha montada pelo Imperador. É Lando Calrissian, a bordo da Millennium Falcon que se aperceberá a tempo do esquema imperial, devido à estranha inatividade da massiva frota imperial que se encontrava juntamente em órbita com a Estrela da Morte, avisando o Almirante Ackbar a retirar com as naves para uma distância segura. Uma descarga proveniente da própria Estrela da Morte que destruiu um cruzador Nebulon, revelaria por fim a verdadeira natureza da armadilha - a aniquilação completa da Aliança Rebelde.
+
+    <div class="foto">
+        <img src="https://qph.cf2.quoracdn.net/main-qimg-632a3c5b338ec443cea08b475526caa4-lq" alt="">
+    </div>
+
+    <p>Quando o assalto à estação emissora em Endor, Luke Skywalker, ciente do que o seu destino lhe reserva, decide entregar-se e enfrentar Darth Vader que se havia revelado seu pai. Luke, previamente avisado por Yoda que a sua prova de fogo para justificar o seu título de Cavaleiro Jedi seria enfrentar Vader, vislumbrava agora uma réstia de luz e bondade no coração do seu pai, enclausurado dentro da horrível armadura mecânica. Luke tentará ainda persuadir o pai a ouvir a sua consciência, mas segundo as palavras do próprio "Agora é tarde demais para mim, filho". Vader levará assim o filho à presença do Imperador Palpatine na qual segundo as suas palavras, Luke "se converterá ao lado sombrio ou morrerá".</p> <br><br>
+
+    <p>Confrontando a assustadora presença do próprio Imperador, Luke Skywalker é então constantemente tentado por este a usar a sua raiva para o atacar, completando assim a sua viagem para o lado sombrio da Força. Luke manterá a sua compostura ainda durante algum tempo mas após a revelação da armadilha em que a frota rebelde mergulharia assim que entrasse na órbita da lua, por parte do próprio Imperador Palpatine, seguida da primeira descarga da nova Estrela da Morte que começará a dizimar a frota rebelde, Luke cego de raiva tentará atacar o Imperador com o seu sabre de luz propositadamente posto ao alcance do mesmo, pelo próprio Palpatine. Vader bloqueará este ataque direto ao seu mestre e assim pai e filho começarão o duelo que decidirá o futuro da galáxia à medida que o lado sombrio da Força cresce. Apesar de Vader ser um lutador excelso, este não resistirá à perícia e agilidade das novas habilidades adquiridas pelo seu filho alimentadas e duplicadas pela raiva passional com que este se encontrava no momento. Luke derrotará assim o seu pai decepando a sua mão esquerda. <br><br>
+
+        <video controls src="SaveTube.io-Luke Skywalker vs Darth Vader - Parte 2 (Episódio VI) Dublado [PT-BR] 1080p60f.mp4"></video>
+
+        <p>É contudo neste momento que o destino dá mais uma reviravolta: ao contemplar a verdadeira natureza mecânica da mão decepada do seu pai, Luke ver-se-á assim à luz do seu próprio reflexo comparando a sua mão esquerda, também biônica, com a do seu pai, como uma representação do próprio Lado sombrio da Força, ou seja, um poder facilmente adquirível mas horrivelmente deformador a nível interno ainda que exteriormente invisível. Assim num lapso de consciência, Luke recusar-se-á a matar o seu pai e a ocupar o seu lugar como previsto pelo Imperador, declarando de seguida o falhanço deste. É então que num misto de surpresa e raiva o Palpatine atacará Luke com uma poderosíssima descarga elétrica emanante das suas próprias mãos que tombará imediatamente o inexperiente Luke a uma agonia sem precedentes. Palpatine estava decidido a destruir Luke, o último dos Jedi ali mesmo e nada o poderia impedir. Na sua agonia, Luke suplicaria ajuda ao pai que se encontrava ainda vivo mas muito fraco. Os gritos suplicantes de Luke farão, contudo, o que os seus apelos não fizeram anteriormente; assim, num misto de revolta e de amor pelo seu filho, Darth Vader arremessará o Imperador para um poço gradeado que se encontrava na mesma sala que conduzia diretamente ao reator principal da estação, matando instantaneamente o Imperador. <br><br>
+        
+       <p> Contudo, Vader terá pouco tempo para testemunhar a sua própria redenção. Os seus já danificados sistemas vitais, sofreram ainda mais dano devido às descargas eléctricas do Imperador que parcialmente atingiram Vader enquanto este carregava o Imperador para o poço de ventilação onde este encontraria a morte, eliminando todas as hipóteses de sobrevivências do antigo Lorde Sith. Vader terá ainda assim tempo suficiente para um último diálogo com o seu filho Luke, que correrá em seu auxílio após se recompor dos ataques do Imperador.</p> <br><br>
+
+       <div class="foto">
+        <img src="https://www.comicbasics.com/wp-content/uploads/2023/07/vader-death-1.jpeg" alt="">
+       </div>
+
+       <p>Vader pedirá então a Luke para lhe retirar a sua máscara para o ver por uma última vez com os seus próprios olhos; por debaixo da terrível máscara Luke encontrará apenas um pobre homem deformado pelo lado sombrio e pela máquina que garantia a sua subsistência , tão diferente da figura imponente que outrora a sua terrível presença emanava. Vader admitirá por fim que Luke estava certo a seu respeito. Em um sussurro, Vader pede que Luke diga à irmã que estava certo. Dando um último suspiro, ele morre e transforma-se na Força como espírito. Luke tornar-se-á assim no último e simultaneamente no primeiro Jedi da Nova Era.</p><br><br>
+
+       <p>Pouco depois de Luke sair com o corpo de Vader da Estrela da Morte, as forças rebeldes (lideradas por Lando Calrissian) invadem o interior da estação, pois o escudo havia sido desactivado por Han Solo e Leia, e destroem o reactor principal. A estação colapsa e explode, assinalando a derrota das forças Imperiais e do próprio Imperador.</p><br><br>
+
+       <div class="foto">
+        <img src="https://static.wikia.nocookie.net/ptstarwars/images/5/55/JediGhosts-ROTJ.png/revision/latest?cb=20171012160252" alt="">
+       </div>
+
+       <p>No final, Luke reunir-se-à com os seus amigos em Endor para festejar a vitória conjuntamente com os Ewoks. Aqui Luke revelará à Leia a sua relação parentesca e, consequentemente, Leia revelará o mesmo a Han Solo, o que oficializará a seu namoro. Luke ainda tem uma visão dos espíritos de Yoda, Obi-Wan e seu pai Anakin Skywalker juntos de novo, antes que Leia o abrace e leve-o para perto dos amigos</p><br><br>
+
+
+
+
+<a href="OrdemdosFIlmes.html">
+    <p class="retorno" style="
+    font-size: 2rem;
+    text-align: center;">Voltar para tela da História</p>
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=6EDafbrs4TIBq9mi">
+        <p class="retorno" style="
+        font-size: 2rem;
+        text-align: center;">Fim(?)</p>
+   </a>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obi Wan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        html::-webkit-scrollbar {
+        width: 10px;
+        }
+        html::-webkit-scrollbar-thumb {
+        border-radius: 16px;
+        background: #99999988;
+        }
+        html::-webkit-scrollbar-thumb:active {
+        background: #999999;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+            background-color:rgb(0, 0, 22) 
+        }
+    
+    body {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: medium;
+    }
+    
+    h1 {
+        color: #c9b715;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header{
+        background-color: rgb(1, 1, 52);
+    }
+    
+    .navbar {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 34px;
+    }
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+    }
+    
+    .navbar img {
+        margin-top: 0px;
+        max-width:150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        padding: 0 34px;
+    }
+    
+    a {
+        color: #e5da0b;
+        text-decoration: none
+    }
+    
+    li {
+        list-style: none;
+    }
+    .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    }
+    .nav-link {
+        transition: 0.5s ease;
+    }
+    .nav-link:hover {
+        color: darkred;
+        text-decoration: underline;
+    text-shadow: 0.5px 0.4px #FFFFaa;
+    
+    }
+    
+    .Titulo1 {
+        text-align: center;
+        font-size: auto;
+        font-family: sans-serif;
+    }
+    
+    .bar {
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .Punheti {
+        display: none;
+        cursor: pointer;
+    }
+    
+    @media (max-width:768px){
+        .Punheti {
+            display: block;
+        }
+        .Punheti.active .bar:nth-child(2){
+         opacity: 0;
+        }
+        .Punheti.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .Punheti.active .bar:nth-child(3){
+            transform: translateY(8px) rotate(-45);
+        }
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            border-radius: 0 0 20px 20px;
+            background-color: rgb(1, 1, 52);
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .nav-item{
+            margin: 16px 0;
+        }
+        .nav-menu:active {
+           left: 0;
+        }
+    } 
+    
+    p {
+        color: #c9b715;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .retorno{
+    transition: 0.7s;
+}
+
+.retorno:hover{
+    color: #014e01;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px #FFFFaa;
+}
+
+.conteúdo {
+    color: #c9b715;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.tio {
+    border: 0.5px solid #c9b715;
+    border-radius: 30px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.tio:hover {
+    background-color: rgb(2, 71, 1);
+    color: black;
+}
+
+.conteúdo {
+    color: #c9b715;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.tio {
+    border: 0.5px solid #c9b715;
+    border-radius: 30px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.tio:hover {
+    background-color: rgb(2, 71, 1);
+    color: black;
+}
+
+.foto img{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 600px;
+        margin: auto;
+        border: 3px solid #0b6303;
+        border-radius: 25px;
+    }
+
+
+ </style>   
+
+</head>
+<body>
+    <header style="
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #02450daa;
+  ">
+  <nav class="navbar">
+        <a href="index.html" class="logo">Star Wars</a>
+         <ul class="nav-menu">
+            <li class="nav-item" id="menu"> <a href="OrdemdosFIlmes.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                delete
+                </span>Não</a></li>
+             <li class="nav-item" id="menu"> <a href="personagens.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+             <li class="nav-item" id="menu"> <a href="https://twitter.com/i/status/1685046153291743232"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                star
+                </span>Surpresa</a></li>
+         </ul>
+           <div onclick="clicar()" id="punheti" class="Punheti">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </div>
+   </nav>
+  </header>
+
+<section  style="
+padding-top: 60px;"
+> 
+
+<h1 style="color: darkgreen; font-size: 2rem; margin-top: 20px;">O Irmão e Rival do Escolhido</h1>
+
+<div class="foto">
+    <img src="https://m.media-amazon.com/images/M/MV5BNjFiZTllM2ItMDBmMy00YjczLTgxMDktYmZhMWY4MDAyMjRlXkEyXkFqcGdeQXZ3ZXNsZXk@._V1_.jpg" alt="">
+</div>
+
+<p>Obi-Wan Kenobi, mais tarde conhecido também como Ben Kenobi durante seu exílio, foi um Humano Mestre Jedi que serviu à República Galáctica. Ele foi mentor de tanto de Anakin Skywalker quanto seu filho, Luke, treinando-os nos caminhos da Força.</p>
+
+<div class="conteúdo">
+    <ul>
+        <p style="font-size: 1.5rem;">Aparições</p>
+        <li class="tio">Star Wars Episódio IV </li>
+        <li class="tio">Star Wars Episódio V</li>
+        <li class="tio">Star Wars Episódio VI</li>
+        <li class="tio">Star Wars Episódio I </li>
+        <li class="tio">Star Wars Episódio II </li>
+        <li class="tio">Star Wars Episódio III </li>
+        <li class="tio">Star Wars Clone Wars </li>
+        <li class="tio">Star Wars Rebels </li>
+        <li class="tio">Star Wars Battlefront 1 e 2(jogos)</li>
+        <li class="tio">Obi-Wan Kenobi (Série)</li>
+
+
+    </ul>
+</div>
+
+<h2 style="
+text-align: center;font-size: 2rem;
+color: #014e01;">História</h2>
+
+<div class="foto">
+    <img src="https://sm.ign.com/ign_br/screenshot/default/qui-gon-obi-wan_9nw5.jpg" alt="">
+</div>
+
+<p>Nascido planeta Stewjon, Kenobi foi levado como o aprendiz Padawan de Qui-Gon Jinn. Kenobi tornou-se o primeiro Jedi em um milênio a derrotar um Lorde Sith quando ele derrotou Darth Maul durante a Batalha de Naboo. Durante a batalha, Jinn foi mortalmente ferido por Maul, e pereceu nos braços de Kenobi. A pedido de Jinn, Kenobi levou Anakin Skywalker como seu Padawan, treinando durante a década que levaria às Guerras Clônicas.</p><br><br>
+
+<div class="foto">
+    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/03/revenge-of-the-sith.jpg" alt="">
+</div>
+
+   <p> Durante a guerra, Skywalker tornou-se um Cavaleiro Jedi enquanto Kenobi (como resultado de seu sucesso militar na Orla Exterior) foi concedido o título de Mestre e nomeado ao Conselho Jedi. Os dois Jedi lutaram lado a lado como generais muitas vezes. Nos últimos dias das Guerras Clônicas, Skywalker passou para o lado sombrio, traindo os Jedi. O novo Mestre Sith de Skywalker, o Supremo Chanceler Palpatine, usou a Ordem 66 para destruir a Ordem Jedi, embora Kenobi sobreviveu e se reuniu com outro sobrevivente, o Grande Mestre Yoda. Kenobi confrontou Skywalker, que agora tomou o nome Darth Vader, em Mustafar, e os dois duelaram. Kenobi saiu vitorioso da batalha, ferindo gravemente Vader e deixando-o para morrer. No entanto, enquanto Palpatine estabelecia o Império Galáctico no lugar da República Galáctica, Vader era reabilitado, embora forçado a depender de um traje cibernético para suporte de vida. Kenobi foi a exílio em Tatooine, onde ele observaria o filho recém-nascido de Vader, Luke Skywalker, que ele levou para viver com seu tio e tia, Beru e Owen Lars. </p> <br><br>
+
+    <div class="foto">
+        <img src="https://l7world.com/wp-content/uploads/2017/03/Obi-Wan-kills-Darth-Maul-Star-Wars-Rebels.jpg" alt="">
+    </div>
+    
+    <p>Dezessete anos depois, ele eventualmente confrontou seu velho inimigo, Maul, quem ele novamente derrotou em um breve duelo. Enquanto o antigo Sith morria nos braços de Kenobi, os dois finalmente fizeram as pazes, e Maul afirmou que Luke vingaria a ambos. </p><br><br>
+
+    <div class="foto">
+        <img src="https://ovicio.com.br/wp-content/uploads/obi-wan-and-luke.jpg" alt="">
+    </div>
+    
+    <p>Dois anos após a morte de Maul, Kenobi recebeu uma mensagem via R2-D2 de Leia Organa pedindo por ajuda no conflito da Aliança Rebelde contra o Império. O droide continha os planos da Estrela da Morte, uma estação de batalha criada pelo Império capaz de destruir planetas, e os planos precisavam ser levados a Bail Organa em Alderaan. Após a tia e tio de Luke Skywalker serem mortos pelas forças Imperiais buscando os planos, Skywalker concordou em se juntar a Kenobi nesta missão e ser treinado como Jedi. A dupla foi levado a Alderaan por Han Solo, apenas para descobrir que o planeta tinha sido destruído pela Estrela da Morte. A sua nave, a Millennium Falcon, foi capturada pelo raio trator da Estrela da Morte, e Kenobi foi confrontado por Darth Vader. Vader e Kenobi duelaram de novo, e Kenobi permitiu que Vader o matasse para que Luke e seus companheiros pudessem escapar da Estrela da Morte.</p><br><br>
+    
+    <p>Nos anos seguintes, enquanto Luke continuava lutando pela Aliança Rebelde, Kenobi continuou a lhe guiar como espírito da Força, incluindo direcionar Luke ao planeta Dagobah, onde Luke receberia treinamento de um dos Mestres de Obi-Wan, Yoda.</p><br><br>
+
+  <h3 style="text-align: center;font-size: 2rem;
+  color: #014e01; margin-bottom: 45px;">Curiosidades</h3>
+
+                       <h4 style="text-align: center;font-size: 1.7rem;
+                       color: #014e01;">Santine</h4>
+
+                       <div class="foto">
+                        <img src="https://static.wikia.nocookie.net/starwars/images/9/9f/HoldMeObiWanKenobi-TL.png/revision/latest?cb=20131025194032" alt="">
+                       </div>
+
+         <p>Em uma missão, Kenobi e Qui-Gon Jinn passaram um ano no planeta Mandalore protegendo a Duquesa Satine de insurgentes que estavam ameaçando seu mundo. A missão os forçou a trabalhar e lutar juntos como uma equipe, resultando em um vínculo estreito. <br><br>
+
+        Durante esse tempo, eles tiveram um incidente com um enxame de ácaros venenosos, onde Kenobi carregou Satine para um local seguro. Kenobi se apaixonou por Satine durante sua estada em Mandalore, mas apesar de seus sentimentos por ela, ele continuou com seu treinamento e foi transferido para outra missão depois que seus objetivos foram concluídos. <br><br>
+        
+        Kenobi se arrependeu de deixá-la, mas acabou seguindo o Código Jedi pelo qual ele jurou viver. Enquanto isso, Satine escolheu ficar e liderar seu povo, não tendo pedido a Kenobi para ficar, sabendo que teria sido uma escolha difícil para ele. Os dois ainda se encontraram novamente mais tarde, e perceberam que seus sentimentos ainda permaneciam.</p><br><br>
+
+        <h4 style="text-align: center;font-size: 1.7rem;
+        color: #014e01;">Darth Maul</h4>
+
+        <div class="foto">
+            <img src="https://i0.wp.com/www.lafosadelrancor.com/wp-content/uploads/2017/03/darth-maul-obi-wan-kenobi-twin-suns-star-wars-rebels-238921-1280x0.jpg?fit=1024%2C563&ssl=1" alt="">
+        </div>
+
+        <p>Quem não assistiu as séries animadas de Star Wars, "Clone Wars" e "Rebels", pode ficar surpreso ao descobrir que Darth Maul na verdade não morreu ao ser partido no meio por Obi-Wan, e mais tarde retornou com pernas mecânicas. <br><br>
+
+            Obviamente, ele retornou obcecado com vingança, e enfrentou Kenobi várias vezes, embora o Jedi sempre conseguisse levar a melhor. Por fim, Maul conseguiu finalmente atingir Kenobi de uma forma que ele sabia que seria pior que a morte: ele assassinou o grande amor de Obi-Wan, a Duquesa Satine, na sua frente. <br><br>
+            
+            No entanto, o duelo final entre esses dois só acontecia muitos anos depois, quando ambos já estavam idosos. Após passar sua vida à procura de Kenobi, Maul finalmente o encontra em Tatooine, e quando sugere que o Jedi está escondido para proteger "algo ou alguém", Kenobi se prontifica a lutar. Porém, o aguardado duelo termina com apenas um golpe, demonstrando o quanto Obi-Wan evoluiu em suas habilidades. <br><br>      
+            </p>
+
+<a href="personagens.html">
+    <p class="retorno" style="
+    font-size: 2rem;
+    text-align: center;">Voltar para tela de personagens</p>
+
+
+</section>
+</body>
+</html>

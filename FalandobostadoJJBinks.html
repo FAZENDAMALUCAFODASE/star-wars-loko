@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O merdinha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<style>
+    html::-webkit-scrollbar {
+    width: 10px;
+    }
+    html::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background: #99999988;
+    }
+    html::-webkit-scrollbar-thumb:active {
+    background: #999999;
+    }
+
+    html{
+        scroll-behavior: smooth;
+        background-color:rgb(0, 0, 22) 
+    }
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: medium;
+}
+
+h1 {
+    color: #c9b715;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(1, 1, 52);
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.navbar img {
+    margin-top: 0px;
+    max-width:150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    padding: 0 34px;
+}
+
+a {
+    color: #e5da0b;
+    text-decoration: none
+}
+
+li {
+    list-style: none;
+}
+.nav-menu {
+display: flex;
+align-items: center;
+gap: 60px;
+}
+.nav-link {
+    transition: 0.5s ease;
+}
+.nav-link:hover {
+    color: darkred;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.4px #FFFFaa;
+}
+.Titulo1 {
+    text-align: center;
+    font-size: auto;
+    font-family: sans-serif;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.Punheti {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    .Punheti {
+        display: block;
+    }
+    .Punheti.active .bar:nth-child(2){
+     opacity: 0;
+    }
+    .Punheti.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .Punheti.active .bar:nth-child(3){
+        transform: translateY(8px) rotate(-45);
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: rgb(1, 1, 52);
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu:active {
+       left: 0;
+    }
+} 
+
+p {
+    color: #c9b715;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.foto img{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 600px;
+        margin: auto;
+        border: 3px solid #0f0249;
+        border-radius: 20px;
+    }
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+.Binks img {
+    align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 500px;
+        margin: auto;
+        border: 3px solid #0f0249;
+        border-radius: 20px;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+}
+
+
+.Binks img:hover {
+   transform:rotate(99999999999999999deg);
+   transition: 10s;
+}
+
+
+</style>   
+
+
+<body>
+    <header style="
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #02450daa;
+  ">
+  <nav class="navbar">
+        <a href="index.html" class="logo">Star Wars</a>
+         <ul class="nav-menu">
+            <li class="nav-item" id="menu"> <a href="OrdemdosFIlmes.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                delete
+                </span>Não</a></li>
+             <li class="nav-item" id="menu"> <a href="personagens.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+             <li class="nav-item" id="menu"> <a href="https://twitter.com/i/status/1685046153291743232"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                star
+                </span>Surpresa</a></li>
+         </ul>
+           <div onclick="clicar()" id="punheti" class="Punheti">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </div>
+   </nav>
+  </header>
+    <hr>
+<section  style="
+padding-top: 60px;"
+> 
+
+<h1 style=" color: #0f0249; margin-top: 20px;font-size:2rem;">O pior personagem</h1>
+
+<div class="foto">
+    <img src="https://i.kym-cdn.com/photos/images/original/001/842/994/7dc.jpg" alt="">
+</div>
+
+<p>Não tenho palavras de como descrever este perosnagem, motivos de meu ódio pelo episódio 1, é com certeza o elemento mais inútil de todo o filme, sem objetivo nenhum, apenas gritos, e piadas sem graça, não vale a pena comentar a história dele, nem fui atrás, essa <strong>Desgraça</strong> me faz querer me matar toda vez que vejo ele aparecendo</p><br><br>
+
+<div class="foto">
+    <img src="https://eu-images.contentstack.com/v3/assets/blt949ea8e16e463049/blt2f584391ce233438/645301b300cec459cb2f8ae4/jar_jar_binks.png" alt="">
+</div>
+
+<p>Esse porra deu muito problema pro ator que o interpretou, porque os fãs cheios de ódio fizeram diversas ameças, o que está errado, muito errado, e agora me pergunto o motivo do George Lucas criar esse desgraçado, e a única razão seria lavagem de dinheiro, pois tanta coisa pra usar os efeitos especiais no filme, utilizam nesse merda</p>
+
+<div class="video">
+    <iframe width="961" height="395" src="https://www.youtube.com/embed/q1euF70SRWA" title="Momentos do Jar Jar Binks Parte 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<p>Como pode ver, não sei se concorda comigo, mas essa aberração chamada jar jar binks só serve para gritar e tentar ser engraçado e é apenas um elemento péssimo do roteiro pois só atrapalha com a experiência, porém esse lixo encheu os bolsos do George Lucas</p>
+
+<div class="Binks">
+    <img src="https://www.tenhomaisdiscosqueamigos.com/wp-content/uploads/2018/07/jar-jar-binks-696x472.jpg" alt="">
+</div>
+<br><br><br>
+
+
+
+
+
+
+</section>
+</body>
+</html>

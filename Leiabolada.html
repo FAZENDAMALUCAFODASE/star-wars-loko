@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leia Organa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        html::-webkit-scrollbar {
+        width: 10px;
+        }
+        html::-webkit-scrollbar-thumb {
+        border-radius: 16px;
+        background: #99999988;
+        }
+        html::-webkit-scrollbar-thumb:active {
+        background: #999999;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+            background-color:rgb(0, 0, 22) 
+        }
+    
+    body {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: medium;
+    }
+    
+    h1 {
+        color: #c9b715;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header{
+        background-color: rgb(1, 1, 52);
+    }
+    
+    .navbar {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 34px;
+    }
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+    }
+    
+    .navbar img {
+        margin-top: 0px;
+        max-width:150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        padding: 0 34px;
+    }
+    
+    a {
+        color: #e5da0b;
+        text-decoration: none
+    }
+    
+    li {
+        list-style: none;
+    }
+    .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    }
+    .nav-link {
+        transition: 0.5s ease;
+    }
+    .nav-link:hover {
+        color: darkred;
+        text-decoration: underline;
+    text-shadow: 0.5px 0.4px #FFFFaa;    
+    }
+    
+    .Titulo1 {
+        text-align: center;
+        font-size: auto;
+        font-family: sans-serif;
+    }
+    
+    .bar {
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .Punheti {
+        display: none;
+        cursor: pointer;
+    }
+    
+    @media (max-width:768px){
+        .Punheti {
+            display: block;
+        }
+        .Punheti.active .bar:nth-child(2){
+         opacity: 0;
+        }
+        .Punheti.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .Punheti.active .bar:nth-child(3){
+            transform: translateY(8px) rotate(-45);
+        }
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            border-radius: 0 0 20px 20px;
+            background-color: rgb(1, 1, 52);
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .nav-item{
+            margin: 16px 0;
+        }
+        .nav-menu:active {
+           left: 0;
+        }
+    } 
+    
+    p {
+        color: #c9b715;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .retorno{
+    transition: 0.7s;
+}
+
+.retorno:hover{
+    color:darkblue;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px #FFFFaa;
+}
+
+.conteúdo {
+    color: #c9b715;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+
+.conteúdo {
+    color: #c9b715;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.tio {
+    border: 0.5px solid #c9b715;
+    border-radius: 30px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.tio:hover {
+    background-color: rgb(9, 1, 71);
+    color:#c9b715;
+}
+
+.foto img{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 600px;
+        margin: auto;
+        border: 3px solid #110245aa;
+        border-radius: 25px;
+    }
+ </style>   
+
+</head>
+<body>
+    <header style="
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #120245aa;
+  ">
+  <nav class="navbar">
+        <a href="index.html" class="logo">Star Wars</a>
+         <ul class="nav-menu">
+            <li class="nav-item" id="menu"> <a href="OrdemdosFIlmes.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                delete
+                </span>Não</a></li>
+             <li class="nav-item" id="menu"> <a href="personagens.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+             <li class="nav-item" id="menu"> <a href="https://twitter.com/i/status/1685046153291743232"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                star
+                </span>Surpresa</a></li>
+         </ul>
+           <div onclick="clicar()" id="punheti" class="Punheti">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </div>
+   </nav>
+  </header>
+
+<section  style="
+padding-top: 60px;"
+> 
+
+<h1 style=" color: #0f0249; margin-top: 20px;font-size:2rem;">A princesa guerreira</h1>
+
+<div class="foto">
+    <img src="https://s2-g1.glbimg.com/564iUm_qElitbPk70KZZJrP83zQ=/0x0:620x465/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2016/J/R/xAVoPdSaApvuYrSmcAoA/leia.jpg" alt="">
+</div>
+
+<p>Leia Organa (nascida Leia Amidala Skywalker) era uma Humana sensível à Força que serviu como Princesa de Alderaan, membro do Senado Imperial, General da Aliança pela Restauração da República e da Nova República, e a general fundadora da Resistência. Apesar de tudo, ela se tornou fundamental na derrota do Império Galáctico na Guerra Civil Galáctica e liderou a guerra contra a Primeira Ordem. Ela nasceu dezenove anos antes da Batalha de Yavin como filha do Cavaleiro Jedi Anakin Skywalker e da Senadora Padmé Amidala. Depois que sua mãe morreu e seu pai caiu para o lado sombrio da Força para se tornar Darth Vader, Leia foi adotada pela Casa dos Organa. Ela tomou o lugar de seu pai adotivo, Bail Organa, no Senado e ajudou a liderar a batalha contra o Império.</p>
+
+<div class="conteúdo">
+    <ul>
+        <p style="font-size: 1.5rem;">Aparições</p>
+        <li class="tio">Star Wars Episódio IV</li>
+        <li class="tio">Star Wars Episódio V</li>
+        <li class="tio">Star Wars Episódio VI </li>
+        <li class="tio">Star Wars Episódio VIII </li>
+        <li class="tio">Star Wars Episódio IX </li>
+        <li class="tio">Star Wars Battlefront 1 e 2(jogos)</li>
+        <li class="tio">Obi Wan (Série)</li>
+
+    </ul>
+</div>
+
+<h2 style="font-size: 1.5rem; color: #0f0249; text-align: center; margin-top: 15px;">História</h2>
+
+<div class="foto">
+    <img src="https://super.abril.com.br/wp-content/uploads/2017/01/o-que-o-cabelo-da-princesa-lea-tem-a-ver-com-sua-memc3b3ria.jpg?quality=90&strip=info&w=1024&h=682&crop=1" alt="">
+</div>
+
+    <p>Durante a guerra com o Império, Organa foi encarregada dos planos roubados da Estrela da Morte, uma super arma imperial capaz de destruir planetas inteiros. Ela também conheceu e tornou-se amiga de Luke Skywalker, - que, desconhecido por qualquer um deles, era seu irmão gêmeo - Han Solo e Chewbacca, que a ajudaram a escapar do cativeiro na Estrela da Morte e devolver os planos roubados à Rebelião. Depois que a Estrela da Morte foi destruída durante a Batalha de Yavin, Organa continuou a ajudar a liderar o esforço de guerra e coordenar as operações da Aliança. <br><br>
+
+        <div class="foto">
+            <img src="https://i.pinimg.com/736x/0a/f8/fb/0af8fb0234c8ca8833843f2c583e4898.jpg" alt="">
+        </div>
+
+    <p>Após a Batalha de Hoth, Vader capturou Organa e Solo na Cidade das Nuvens para usá-los como isca para atrair Skywalker até lá. Solo, com quem Organa havia se apaixonado, foi capturado pelo caçador de recompensas Boba Fett, mas os outros conseguiram escapar e se juntar à Frota da Aliança. Não muito tempo depois, Organa ajudou no resgate bem-sucedido de Han Solo, preso por Jabba o Hutt, no qual ela matou o lorde do crime e ganhou o título de "Huttslayer". Após o resgate de Solo, ela participou da Batalha de Endor como parte da equipe do General Solo, com o objetivo de destruir o gerador de escudo da Estrela da Morte. Durante a campanha, Organa soube que o Lorde Sith Darth Vader era seu pai de sangue e Luke Skywalker seu irmão de sangue. Vader e o Imperador Galáctico, Darth Sidious, morreram durante a batalha. <br><br></p>
+    
+    
+
+<a href="personagens.html">
+    <p class="retorno" style="
+    font-size: 2rem;
+    text-align: center;">Voltar para tela de personagens</p>
+
+
+
+</section>
+</body>
+</html>

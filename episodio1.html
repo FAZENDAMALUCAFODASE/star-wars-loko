@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ameaça Fantasma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+        html::-webkit-scrollbar {
+        width: 10px;
+        }
+        html::-webkit-scrollbar-thumb {
+        border-radius: 16px;
+        background: #99999988;
+        }
+        html::-webkit-scrollbar-thumb:active {
+        background: #999999;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+            background-color:rgb(0, 0, 22) 
+        }
+    
+    body {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: medium;
+    }
+    
+    h1 {
+        color: #c9b715;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header{
+        background-color: rgb(1, 1, 52);
+    }
+    
+    .navbar {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 34px;
+    }
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+    }
+    
+    .navbar img {
+        margin-top: 0px;
+        max-width:150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        padding: 0 34px;
+    }
+    
+    a {
+        color: #e5da0b;
+        text-decoration: none
+    }
+    
+    li {
+        list-style: none;
+    }
+    .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    }
+    .nav-link {
+        transition: 0.5s ease;
+    }
+    .nav-link:hover {
+        color: darkred;
+        text-decoration: underline;
+    text-shadow: 0.5px 0.4px #FFFFaa;
+   }
+    
+    .Titulo1 {
+        text-align: center;
+        font-size: auto;
+        font-family: sans-serif;
+    }
+    
+    .bar {
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .Punheti {
+        display: none;
+        cursor: pointer;
+    }
+    
+    @media (max-width:768px){
+        .Punheti {
+            display: block;
+        }
+        .Punheti.active .bar:nth-child(2){
+         opacity: 0;
+        }
+        .Punheti.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .Punheti.active .bar:nth-child(3){
+            transform: translateY(8px) rotate(-45);
+        }
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            border-radius: 0 0 20px 20px;
+            background-color: rgb(1, 1, 52);
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .nav-item{
+            margin: 16px 0;
+        }
+        .nav-menu:active {
+           left: 0;
+        }
+    } 
+    
+    p {
+        color: #c9b715;
+        font-size: 22px;
+        padding: 10px;
+    }
+    .retorno{
+    transition: 0.5s;
+    text-align: center;
+}
+
+.retorno:hover{
+    color: #4e0101;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px #FFFFaa;
+}
+
+.foto img{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 700px;
+        margin: auto;
+        border: 3px solid #0f0249;
+        border-radius: 20px;
+    }
+
+    video {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        border: 1px solid #4e0101;
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+ </style>   
+</head>
+<body>
+    <header style="
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #02450daa;
+  ">
+  <nav class="navbar">
+        <a href="index.html" class="logo">Star Wars</a>
+         <ul class="nav-menu">
+            <li class="nav-item" id="menu"> <a href="OrdemdosFIlmes.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                delete
+                </span>Não</a></li>
+             <li class="nav-item" id="menu"> <a href="personagens.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+             <li class="nav-item" id="menu"> <a href="https://twitter.com/i/status/1685046153291743232"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                star
+                </span>Surpresa</a></li>
+         </ul>
+           <div onclick="clicar()" id="punheti" class="Punheti">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </div>
+   </nav>
+  </header>
+  
+<section  style="
+padding-top: 90px;"
+> 
+
+<h1 style="color: #c9b715; font-size: 2rem; text-align: center;">Ameaça Fantasma(Alguém me Mata)</h1>
+
+<div class="foto">
+    <img src="https://nosbastidores.com.br/wp-content/uploads/2021/03/critica_Star_Wars_Episodio_1_A_Ameaca_Fantasma_bastidores.jpg" alt="">
+</div>
+
+<p>É o ano de 32 ABY e uma disputa comercial entre a Federação de Comércio e o planeta Naboo levou à um bloqueio ao planeta. Chanceler Finis Valorum da República Galáctica secretamente envia dois Jedi, Qui-Gon Jinn e seu Padawan Obi-Wan Kenobi, como embaixadores à nave-capitânia Saak'ak para encontrar com o Vice-rei da Federação de Comércio Nute Gunray a fim de resolver a disputa. <br><br>
+
+    A mando do misterioso Darth Sidious, com quem mantém relação secreta, a Federação de Comércio ordena a morte dos dois Jedi e inicia a Invasão de Naboo. Assim sendo, a nave dos embaixadores, a Radiant VII, é destruída. Qui-Gon e Obi-Wan escapam da tentativa de assassinato da Federação enfrentando droides de batalha mas se vêem obrigados a fugir para Naboo.</p><br><br>
+
+    <div class="foto">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/image_d499abf8.jpeg?region=0%2C0%2C1560%2C878" alt="">
+    </div>
+
+    <p>Na superfície do planeta, os Jedi encontram o nativo local Jar Jar Binks que, após ter sua vida salva por Qui-Gon, os leva para Otoh Gunga, uma cidade Gungan debaixo d'água, para escapar do exército da Federação de Comércio. Enquanto isso, a Federação invade Naboo e captura a líder do planeta, Rainha Amidala. Os Jedi têm uma audiência com o líder Gungan, Rugor Nass, e pedem o apoio dos Gungans para ajudar as pessoas de Naboo. Nass não se mostra disposto a ajudar, contudo oferece um bongo para que os Jedi cheguem à Theed. Ao chegarem à capital de Naboo, os Jedi, acompanhados de Jar Jar Binks, resgatam a Rainha Amidala do exército da Federação de Comércio. Eles planejam ir até Coruscant, o planeta capital da República Galáctica, para pedir ajuda ao Senado. <br><br>
+
+        <p>A nave da Rainha sofre danos graves ao tentar furar o bloqueio de naves da Federação de Comércio que orbita Naboo. No entanto um droide chamado R2-D2 heroicamente consegue fazer reparos suficientes, possibilitando a entrada no hiper-espaço. Ao saber da fuga, Darth Sidious envia seu aprendiz, Darth Maul, para matar os dois Jedi e capturar a Rainha. <br><br>
+
+            <div class="foto">
+                <img src="https://www.jedicenter.com.br/wp-content/uploads/2016/09/anakin-1-cover.png" alt="">
+            </div>
+        
+        <p>Devido ao ataque, a nave é forçada a fazer escala no planeta deserto de Tatooine para reparos. Enquanto procuram pelas partes necessárias, eles fazem amizade com o pequeno Anakin Skywalker, um garoto escravo, cujo mestre é Watto, um Toydariano dono de um ferro-velho. Anakin tem dons para pilotagem e mecânica (ele construiu quase completamente um droide chamado C-3PO). Qui-Gon Jinn sente uma forte presença da Força em Anakin, e percebe que ele possa ser o Escolhido, que irá trazer equilíbrio à Força.</p><br><br>
+
+        <div class="foto">
+            <img src="https://www.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2021/10/star-wars-anakin-vaina-carreras-2504889.jpg" alt="">
+        </div>
+
+        <p>Ao inscrever Anakin numa corrida de pods, Qui-Gon faz uma aposta com Watto, na qual fica acertado que, caso o garoto vença a corrida, o Toydariano concederia as peças necessárias para o conserto da nave e libertaria Anakin. Se o menino perdesse, a nave seria de Watto. Ao fim do dia, o jovem Skywalker havia ganhado a corrida, conquistado as peças da nave para seus novos amigos e conquistado sua liberdade. Qui-Gon conversa com a mãe de Anakin sobre as habilidades do garoto, e ela acaba por autorizar que o filho vá para Coruscant, para ser apresentado ao Conselho Jedi. <br><br>
+
+            <div class="foto">
+                <img src="https://i0.wp.com/popoca.com.br/wp-content/uploads/2022/06/Obi-Wan-Kenobi-Darth-Maul.jpg?fit=1400%2C788&ssl=1" alt="">
+                <p style="color: #4e0101; text-align: center;">Darth Maul</p>
+            </div>
+
+            <p>Enquanto o grupo se prepara para sair do planeta, Darth Maul aparece e tem seu primeiro encontro com Qui-Gon Jinn. Após um breve embate, Qui-Gon embarca na nave que segue para Coruscant, deixando um irado Sith para trás.</p><br><br>
+
+            <p>Em Coruscant, Qui-Gon Jinn informa ao Conselho Jedi sobre o misterioso ataque sofrido por ele em Tatooine. Devido ao fato do atacante ter profundos conhecimento da Força, o Conselho teme que esse acontecimento indique o reaparecimento dos Sith, uma ordem de seguidores do Lado Sombrio da Força que todos pensavam haver se extinguido há tempos. Qui-Gon também relata ao Conselho o encontro com Anakin, na esperança que este seja aceito para o treinamento Jedi. Após os testes com o garoto e deliberações a respeito, o Conselho nega permissão para treinamento alegando que, de acordo com o Código Jedi, Anakin é muito velho para ser treinado. A decisão também levou em consideração a forte presença de medo no garoto. <br><br>
+
+                <div class="foto">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/palpatine-family-children-1576775874.jpg?crop=0.488xw:0.976xh;0.512xw,0&resize=1200:*" alt="">
+                </div>
+
+               <p> Enquanto isso é discutido no Templo Jedi, Palpatine, o senador de Naboo usa a situação da Rainha Amidala a seu favor, persuadindo-a a pedir um Voto de Desconfiança no Chanceler Valorum. Sem ver nenhuma outra alternativa e, dada sua frustração com a falta de atitude do Senado, a Rainha decide retornar ao seu planeta natal para repelir a invasão ao lado de seu povo. Os dois Jedi são designados para acompanhar a Rainha de volta para Naboo, tanto para protegê-la como para tentar obter mais informações sobre o possível envolvimento dos Sith. <br><br>
+                
+                <p>De volta em Naboo, Rainha Amidala consegue convencer os Gungans a formarem uma aliança e lutarem juntos contra a Federação de Comércio. Os Gungans conseguem defender-se da artilharia dos droides usando o escudo de tecnologia Gungan. Porém os droides de batalha entram em ação e começam a subjugar os Gungans. A derrota para a aliança parece iminente. <br><br>
+                
+                Mas a vitória é conseguida quando o pequeno Anakin Skywalker acidentalmente pilota um caça em meio a batalha na órbita de Naboo e destrói a Nave de Comando dos Droides da Federação, desativando o exército de droides. Enquanto isso, a Rainha Amidala e sua força invadem o palácio e capturam Nute Gunray.</p><br><br>
+
+                <p>Ao mesmo tempo, Darth Maul entrou em combate com Qui-Gon e Obi-Wan usando seu sabre de luz duplo. Durante a luta, Obi-Wan acaba se separando de seu mestre pelo campo de força na entrada da sala de geradores. Jinn e o Sith continuam sua batalha observados por Obi-Wan. Em meio ao confronto, Maul atinge Qui-Gon Jinn no rosto e, aproveitando o atordoamento de seu adversário, acerta-o no peito com o sabre de luz, ferindo-o mortalmente. Obi-Wan luta com Darth Maul vigorosamente, conseguindo, inclusive, partir o sabre-duplo de Maul ao meio. O Sith obtém vantagem jogando o padawan no fosso da sala de geradores. Obi-Wan escapa da queda segurando-se na beira do fosso. Darth Maul chuta o sabre de luz do Jedi no fosso e prepara-se para executá-lo. O Padawan utiliza da Força para pular fora do fosso ao mesmo tempo que puxa de volta o sabre de luz de seu mestre. Ao pousar atrás do supreso Sith, Obi-Wan ativa o sabre em suas mãos e corta ao meio Darth Maul, cujo cadáver cai dentro do fosso. Pouco antes de falecer, Qui-Gon pede que Obi-Wan treine Anakin e faça dele um Jedi.</p>
+
+                <video controls src="SaveTube.io-Qui-Gon Jinn e Obi-Wan Kenobi vs Darth Maul - Dublado [PT-BR] HD 1080p(720p).mp4"></video>
+
+                <p>Após a batalha, na qual derrotou sozinho um Sith, o Conselho Jedi nomeou Obi-Wan como um Cavaleiro Jedi. Kenobi informa para Yoda sobre o pedido de Qui-Gon acerca do jovem Anakin Skywalker. O Mestre Jedi relutantemente o permite treinar o garoto. Durante a cerimônia de cremação do corpo de Qui-Gon Jinn, Mace Windu e Yoda concordam que o incidente foi definitivamente causado pelos Sith. Sabendo que sempre há somente dois Sith (um Mestre e um aprendiz), os dois Mestres Jedi acreditam que ainda há um outro Sith a ser descoberto. <br><br>
+
+                   <p> Palpatine, o recém-eleito novo Chanceler, chega à Naboo para parabenizar a Rainha Amidala em sua vitória contra a Federação, enquanto Nute Gunray é mandado para ser sentenciado por seus crimes. <br><br>
+                    
+                    Termina com uma grande celebração em Theed pela liberação da Federação de Comércio e pela união entre os povos de Naboo. Rainha Amidala presenteia Chefe Nass a fim de simbolizar a estima e amizade resultantes da união.</p><br><br>
+
+
+
+
+
+  <a href="OrdemdosFIlmes.html">
+    <p class="retorno" style="
+    font-size: 2rem;
+    text-align: center;">Voltar para tela da História</p>
+    <a href="episodio3.html">
+        <p class="retorno" style="
+        font-size: 2rem;
+        text-align: center;">Avançar história</p>
+   </a>
+</section>
+</body>
+</html>

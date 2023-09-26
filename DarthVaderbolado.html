@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Anakin</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+<style>
+    html::-webkit-scrollbar {
+    width: 10px;
+    }
+    html::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background: #99999988;
+    }
+    html::-webkit-scrollbar-thumb:active {
+    background: #999999;
+    }
+
+    html{
+        scroll-behavior: smooth;
+        background-color:rgb(0, 0, 22) 
+    }
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: medium;
+}
+
+h1 {
+    color: #c9b715;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(1, 1, 52);
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.navbar img {
+    margin-top: 0px;
+    max-width:150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    padding: 0 34px;
+}
+
+a {
+    color: #e5da0b;
+    text-decoration: none
+}
+
+li {
+    list-style: none;
+}
+.nav-menu {
+display: flex;
+align-items: center;
+gap: 60px;
+}
+.nav-link {
+    transition: 0.5s ease;
+}
+.nav-link:hover {
+    color: darkred;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.4px #FFFFaa;
+    
+}
+.Titulo1 {
+    text-align: center;
+    font-size: auto;
+    font-family: sans-serif;
+}
+
+.retorno{
+    transition: 0.5s;
+}
+
+.retorno:hover{
+    color: #4e0101;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px #FFFFaa;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.Punheti {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    .Punheti {
+        display: block;
+    }
+    .Punheti.active .bar:nth-child(2){
+     opacity: 0;
+    }
+    .Punheti.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .Punheti.active .bar:nth-child(3){
+        transform: translateY(8px) rotate(-45);
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: rgb(1, 1, 52);
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu:active {
+       left: 0;
+    }
+} 
+
+p {
+    color: #c9b715;
+    font-size: 22px;
+    padding: 10px;
+}
+
+h2 {
+    color: darkred;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.anakin img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width:700px;
+    max-height:650px;
+    width: auto;
+    height: auto;
+    margin-top: 10px;  
+    margin-bottom: 15px;
+    border: 3px solid darkred;
+    border-radius: 10%;
+}
+
+.primeiro {
+    margin-top: 20px;
+}
+
+.conteúdo {
+    color: #c9b715;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.tio {
+    border: 0.5px solid #c9b715;
+    border-radius: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.tio:hover {
+    background-color: darkred;
+    color: black;
+    
+
+}
+
+.conteúdo p {
+    font-size: 30px;
+    border: 1px;
+    
+}
+
+h3 {
+    text-align: center;
+    color: darkred;
+    font-size: 2em;
+}
+
+.foto2 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width:600px;
+    max-height:350px;
+    width: auto;
+    height: auto;
+    margin-top: 50px; 
+    margin-bottom: 50px;
+    border: 3px solid darkred;
+    border-radius: 25px;
+    background-color: darkred;
+}
+
+h4 {
+    font-size: 2rem;
+    text-align: center;
+    color: #480101;
+}
+
+h5 {
+    margin-top: 50px;
+    font-size: 2rem;
+    text-align: center;
+    color: #480101;
+    margin-bottom: 25px;
+}
+
+h6 {
+    margin-top: 50px;
+    font-size: 2rem;
+    text-align: center;
+    color: #480101;
+    margin-bottom: 25px;
+}
+
+h7 {
+    margin-top: 50px;
+    font-size: 2rem;
+    text-align: center;
+    color: #480101;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+h8 {
+    margin-top: 50px;
+    font-size: 2rem;
+    text-align: center;
+    color: #480101;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.material-symbols-outlined{
+    height: min-content;
+    display: flex;
+    align-items: center;
+}
+
+</style>
+<body>
+    <body class="teste">
+        <header style="
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        background-color: #450202aa;
+      ">
+      <nav class="navbar">
+            <a href="index.html" class="logo">Star Wars</a>
+             <ul class="nav-menu">
+                <li class="nav-item" id="menu"> <a href="OrdemdosFIlmes.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                    delete
+                    </span>Não</a></li>
+                 <li class="nav-item" id="menu"> <a href="personagens.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                    home
+                    </span></a></li>
+                 <li class="nav-item" id="menu"> <a href="https://twitter.com/i/status/1685046153291743232"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                    star
+                    </span>Surpresa</a></li>
+             </ul>
+               <div onclick="clicar()" id="punheti" class="Punheti">
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+             </div>
+       </nav>
+      </header>
+    
+<section  style="
+ padding-top: 60px;"
+ > 
+
+        <h2>O verdadeiro escolhido</h2>
+
+    <div class="anakin">
+        <img src="https://listasnerds.com.br/wp-content/uploads/2021/10/Anakin-Skywalker_DESTAQUE.png" alt="escolhido">
+    </div>
+
+    <p class="primeiro">Anakin Skywalker foi um Humano sensível à Força, que logo se tornou um Cavaleiro Jedi da República Galáctica ao ser considerado o Escolhido da Força. Durante as Guerras Clônicas, suas realizações como comandante no campo de batalha lhe proporcionaram o apelido de Herói Sem Medo. Depois de se voltar para o lado sombrio da Força, ele ficou conhecido como Darth Vader—Lorde Sombrio dos Sith e aprendiz do Imperador Darth Sidious. Como um Lorde Sith, Vader se voltou contra seus antigos companheiros e perseguiu os sobreviventes Jedi da Ordem 66 que quase extinguiu a ordem. Ele se tornou um executor do Império Galáctico, que trabalhou para esmagar a Aliança pela Restauração da República por se opor ao governo de seu Mestre Sith. No entanto, apesar de suas ações como Darth Vader, um vislumbre do lado luminoso da Força permaneceu no antigo Anakin Skywalker.</p>
+
+    <div class="conteúdo">
+        <ul>
+            <p style="font-size: 1.5rem;">Aparições</p>
+            <li class="tio">Star Wars Episódio IV</li>
+            <li class="tio">Star Wars Episódio V</li>
+            <li class="tio">Star Wars Episódio VI </li>
+            <li class="tio">Star Wars Episódio I</li>
+            <li class="tio">Star Wars Episódio II</li>
+            <li class="tio">Star Wars Episódio III </li>
+            <li class="tio">Star Wars Episódio Rebels</li>
+            <li class="tio">Star Wars Rogue One</li>
+            <li class="tio">Obi Wan Kenobi (Série)</li>
+            <li class="tio">Star Wars Jedi Fallen Order (Jogo)</li>
+            <li class="tio">Star Wars Jedi Survivor(Jogo)</li>
+            <li class="tio">Star Wars Battlefront 1 e 2(jogos)</li>
+
+        </ul>
+    </div>
+
+    <h3>História</h3>
+    <div class="foto2">
+        <div class="maldita">
+        <img src="https://cenapop.uol.com.br/media/uploads/legacy/2020/01/ator-2.png" alt="">
+        <divc class="texto"></div>
+    </div>
+    </div>
+    
+    <p>A história de Anakin Skywalker começa em Tatooine, lugar onde vivia com sua mãe, Shmi Skywalker. Ambos eram escravos no planeta desértico sob os comandos de um comerciante chamado Watto. E mesmo diante de toda a pobreza e as péssimas condições de vida, o garoto sempre demonstrou possuir algumas habilidades bastante interessantes.</p> <br> 
+
+       <p>Até que tudo mudou com a chegada de Qui-Gon Jinn, Jar Jar Binks e Padmé Amidala, que estavam à procura de peças para consertar uma nave. Foi assim que, usando sua inteligência e sensibilidade à Força, Anakin conseguiu se libertar da escravidão após competir em uma corrida de Boonta Eve, o maior torneio de Pods de Tatooine.</p> <br> 
+        
+        <p>Qui-Gon Jinn reconheceu a grande capacidade do menino, informando-o que ele poderia, assim, iniciar seu treinamento para se tornar um Jedi. Mas, para isso, ele teve que dizer adeus à mãe, que permaneceu no planeta como uma escrava. </p> <br> 
+
+    <div class="foto2">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/5b6453ef0b4dd10001fe4571-image_9e33249b.jpeg" alt="pinto">
+    </div>
+
+        <p>
+            Com a morte de Qui-Gon Jinn pelas mãos do Lord Sith Darth Maul, o grande encarregado de comandar o treinamento de Anakin foi Obi-Wan Kenobi. Até a sua juventude, o Padawan foi guiado para se transformar em um Cavaleiro Jedi, e quanto mais o tempo passava, mais ele desenvolvia suas habilidades até se tornar alguém arrogante e perspicaz. <br> <br>
+
+            Durante o período, Kenobi era muito mais do que apenas um mestre para Skywalker, que o idolatrava e o considerava como um grande amigo. Ainda assim, o lado obscuro de Anakin, que era impulsionado pelo ressentimento de seu passado, continuava a ganhar força, despertando desconfiança em outros Jedis.</p> 
+
+        <div class="foto2"> 
+            <img src="https://www.cheatsheet.com/wp-content/uploads/2020/02/anakin_padme.jpg" alt="casal lindo">  
+        </div>
+
+            <p>Apesar de ter conhecido Padmé ainda na infância, foi só alguns anos após o início de seu treinamento como Jedi (10 anos depois da Batalha de Naboo, especificamente) que Anakin de fato desenvolveu uma relação com ela. A oportunidade surgiu quando ele e Obi-Wan Kenobi foram designados para proteger a senadora depois de uma tentativa de assassinato. 
+
+            O reencontro só confirmou a paixão que Skywalker sentia por Padmé, e logo um relacionamento amoroso entre os dois se iniciou. Mesmo que a união fosse proibida pelo código Jedi, o casal se casou de maneira secreta, e Padmé acabou ficando grávida posteriormente. <br><br>
+
+            Enquanto isso, a insatisfação de Anakin a respeito da sua posição como Jedi só aumentava, especialmente após a morte da mãe. Ele sempre se questionava acerca de seus próprios objetivos e, à medida que seus poderes aumentavam, sua arrogância também crescia. <br><br>
+
+            Então, Skywalker começou a ter visões de que Padmé morreria durante o parto. Determinado a evitar a tragédia, ele partiu em busca de qualquer solução para impedir que seus piores pesadelos se tornassem realidade. Foi assim que o Supremo Chanceler Palpatine, que já tinha estabelecido uma certa relação com o jovem Anakin, contou para ele que assumir o lado sombrio da Força era uma forma de evitar a morte. </p><br><br>
+
+            <div class="foto2">
+                <img src="https://images4.alphacoders.com/132/thumb-1920-1327480.png" alt="garai">
+            </div>
+
+            <p>Após a revelação de que Palpatine era, na verdade, o <a style="color:#480101;"  href="Velhochato.html">Lord Sith Darth Sidious</a>, Anakin começou seu treinamento para também se tornar um Sith e, dessa forma, mudar o que ele acreditava ser o destino de Padmé. Este foi o ponto de partida para o surgimento de seu alter ego Darth Vader, embora, durante esse início, ele fosse apenas uma marionete comandada por Palpatine. <br><br>
+
+                Claro que, com a mudança drástica em seu comportamento, Padmé começou a notar que havia algo de errado com Skywalker. Assim, com a ajuda de Obi-Wan Kenobi, eles partiram para o planeta Mustafar, onde Anakin tinha sido enviado para matar o Conselho Separatista. Chegando lá, Amidala confrontou o amado acerca das atrocidades que ele vinha cometendo, algo que acabou resultando no embate icônico entre Kenobi e Anakin, que foi queimado e deixado à beira da morte no local. <br><br> 
+                
+                Sua sobrevivência foi possível graças a Palpatine, que o resgatou do rio de lava e o levou para Coruscant, onde uma armadura preta foi criada com a intenção de mantê-lo vivo. Enquanto Darth Vader assumia o lugar de Anakin Skywalker, Padmé acabou perdendo toda a sua vontade de viver e realmente morreu após o nascimento de Luke e Leia. </p><br><br>
+
+                <p>Darth Vader foi um dos grandes responsáveis por instalar o medo na galáxia, enquanto servia como braço direito do Imperador Palpatine. Amargurado por causa dos fantasmas de seu passado, a sede de vingança fez com que ele se aproximasse do lado sombrio da Força com facilidade, influenciando-o a cometer atos terríveis, como a execução da Ordem 66, que exterminou a grande maioria dos Jedis. Além disso, ele também combateu fortemente a Aliança Rebelde, que era vista como uma ameaça para seu governo. <br><br>
+
+                    Suas ações o levaram até mesmo a perseguir o próprio filho, <a style="color: darkgreen;" href="Lukebolado.html">Luke Skywalker</a>, depois da destruição da Estrela da Morte. Eventualmente, a compaixão de Luke forneceu a Vader a redenção que ele tanto necessitava, despertando o Anakin Skywalker que ainda existia em seu íntimo. </p><br><br>
+
+                <h4>Curiosidades</h4> <hr>
+
+
+               <div class="foto2">
+                    <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2017/06/vader-1210x544.jpg" alt="jo">
+                </div>
+                <h5>Sabre de Luz</h5>
+
+                <p>O primeiro teste de Darth Vader após seu renascimento foi o de construir o seu próprio sabre de luz. O Imperador então o explica por que os sabres de luz dos Sith são vermelhos: acontece que os cristais kyber, a fonte de energia dos sabres, sentem dor como qualquer ser vivo, e existe uma forma de fazê-los "sangrar", derramando ódio e dor neles. <br><br>
+
+            Vader então foi instruído a ir atrás de um Jedi para roubar seu cristal kyber e fazê-lo sangrar, de forma a ter o seu próprio sabre de luz Sith. Ele então encontrou o Mestre Jedi Kirak Infil'a, e os dois se enfrentaram até Vader finalmente matar o Jedi e conseguir o seu sabre. Após isso, Vader desmontou o sabre e depositou todo o seu ódio no cristal Kyber, fazendo-o o sangrar e assim construindo o sabre de luz vermelho que o vemos usar na trilogia clássica.</p><br><br>
+
+            <div class="foto2">
+                <img src="https://ovicio.com.br/wp-content/uploads/2022/06/20220620-inquisidores-ovicio.jpg" alt="mortos">
+            </div>
+            <h6>Inquisidores</h6>
+
+            <p>Após o teste que o tornou verdadeiramente digno de ser o aprendiz do Imperador, Vader foi informado a respeito do projeto "Inquisidores". A maioria dos Inquisidores eram Jedi que se converteram ao lado sombrio após a destruição da Ordem Jedi. Vader então recebeu a missão de treiná-los e, junto com eles, caçar e matar todos os Jedi sobreviventes, no que ficou conhecido como "Expurgo". <br><br>
+
+            Os Inquisidores eram liderados em campo pelo "Grande Inquisidor", mas todos respondiam a Vader. Ele era implacável com os Inquisidores, e quando duelou com um deles, o Sexto Irmão, em uma sessão de treinamento, Vader cortou seu braço para ensiná-lo uma lição sobre perda.</p><br><br>
+
+            <div class="foto2">
+                <img src="https://1.bp.blogspot.com/-VOw41g_z3ZI/Xl1-QFp2RcI/AAAAAAACrcY/6iK3S8rU6hEY3_ngR3SmfzverxVzDo-lACLcBGAsYHQ/s1600/iamyourfather.jpg" alt="familia">
+            </div>
+            <h7>Descoberta do filho</h7>
+
+            <p>Em A Vingança dos Sith, vemos que Vader acredita que Padmé e seu filho não nascido morreram. No entanto, ela na verdade teve gêmeos, que foram separados por Obi-Wan Kenobi. A menina, Leia, ficou com o senador Bail Organa, enquanto o menino, Luke, foi levado para o tio, Owen Lars. <br><br>
+
+            Então, algumas pessoas podem se perguntar como Vader ficou sabendo que Luke era seu filho em "O Império Contra-Ataca". Bem, isso aconteceu nos quadrinhos, que se passam logo após os eventos de "Uma Nova Esperança", quando Vader estava obcecado em encontrar o piloto que havia destruído a Estrela da Morte. <br><br>
+            
+            No primeiro encontro entre os dois, ele já acha estranho que Luke esteja usando o sabre que pertenceu a ele quando era Anakin, mas até aí tudo bem, afinal ele sabia que o sabre havia sido levado por Kenobi. Mas ainda com a pulga atrás da orelha, Vader envia Bobba Fett atrás de Luke, e é o caçador de recompensas que descobre que o sobrenome do rapaz é "Skywalker", trazendo essa informação a Vader. Convenhamos, não ficou difícil para o Lorde Sombrio juntar os pauzinhos depois dessa. <br><br>
+            </p>
+
+        <div class="foto2">
+            <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2019/01/10/pai-de-skywalker-int.jpg" alt="fio">
+        </div>
+            <h8>Pai de Anakin</h8>
+            <p>Quando Qui-Gon Jinn conheceu Anakin Skywalker, ele ficou sabendo por meio da mãe do garoto, Shmi Skywalker, que o garoto não tinha pai. Qui-Gon e o Conselho Jedi acreditaram que Anakin tinha sido um meio da Força (ou seja, dos Midi-chlorians) de criar um " Escolhido"para o Lado da Luz, que traria equilíbrio à Força. Porém, a HQ "Darth Vader", de Charles Soule, trouxe uma informação diferente, anos depois. <br><br>
+
+            Quando Darth Vader está em Mustafar, em seu castelo, tentando acessar a Força através da poderosa conexão do planeta com o Lado Sombrio, ele aparece como uma silhueta de energia, enquanto enxerga momentos cruciais de sua vida. Um desses momentos é aquele que Anakin Skywalker nunca chegou a ver: o aparente momento em que sua mãe, Shmi Skywalker, engravidou. <br><br>
+            
+            Nessa cena, vemos que Darth Sidious (também conhecido como Imperador Palpatine) aparece como uma projeção da Força e envolve seus braços em volta de Shmi. Usando seus poderes Sith, ele manipulou os Midi-chlorians dentro do útero da mulher, para que ela concebesse Anakin. Isso remetia a uma conversa entre Anakin e Palpatine em "A Vinganças dos Sith", onde ele falava sobre seu mestre, Darth Plagueis, que havia descoberto como criar vida através da Força. <br><br>
+            
+            No entanto, é importante dizer que tanto o editor Matt Martin quanto o escritor Charles Soule vieram a público dizer que aquilo pode ser apenas uma interpretação da mente de Anakin, e não uma confirmação de que Palpatine é seu pai.</p> <br><br>
+
+           <a href="personagens.html">
+            <p class="retorno" style="
+            font-size: 2rem;
+            text-align: center;">Voltar para tela de personagens</p>
+           </a>
+
+</section>
+</body>
+</html>

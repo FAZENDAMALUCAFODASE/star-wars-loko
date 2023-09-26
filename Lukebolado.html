@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        html::-webkit-scrollbar {
+        width: 10px;
+        }
+        html::-webkit-scrollbar-thumb {
+        border-radius: 16px;
+        background: #99999988;
+        }
+        html::-webkit-scrollbar-thumb:active {
+        background: #999999;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+            background-color:rgb(0, 0, 22) 
+        }
+    
+    body {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: medium;
+    }
+    
+    h1 {
+        color: #c9b715;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+      
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header{
+        background-color: rgb(1, 1, 52);
+    }
+    
+    .navbar {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 34px;
+    }
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+    }
+    
+    .navbar img {
+        margin-top: 0px;
+        max-width:150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        padding: 0 34px;
+    }
+    
+    a {
+        color: #e5da0b;
+        text-decoration: none
+    }
+    
+    li {
+        list-style: none;
+    }
+    .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    }
+    .nav-link {
+        transition: 0.5s ease;
+    }
+    .nav-link:hover {
+        color: darkred;
+        text-decoration: underline;
+    text-shadow: 0.5px 0.4px #FFFFaa;
+    
+    }
+    
+    .Titulo1 {
+        text-align: center;
+        font-size: auto;
+        font-family: sans-serif;
+    }
+    
+    .bar {
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .Punheti {
+        display: none;
+        cursor: pointer;
+    }
+    
+    @media (max-width:768px){
+        .Punheti {
+            display: block;
+        }
+        .Punheti.active .bar:nth-child(2){
+         opacity: 0;
+        }
+        .Punheti.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .Punheti.active .bar:nth-child(3){
+            transform: translateY(8px) rotate(-45);
+        }
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            border-radius: 0 0 20px 20px;
+            background-color: rgb(1, 1, 52);
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .nav-item{
+            margin: 16px 0;
+        }
+        .nav-menu:active {
+           left: 0;
+        }
+    } 
+    
+    p {
+        color: #c9b715;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .foto img{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 600px;
+        margin: auto;
+        border: 3px solid #0b6303;
+        border-radius: 25px;
+    }
+
+    .retorno{
+    transition: 0.7s;
+}
+
+.retorno:hover{
+    color: #014e01;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px #FFFFaa;
+}
+
+.conteúdo {
+    color: #c9b715;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.tio {
+    border: 0.5px solid #c9b715;
+    border-radius: 30px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.tio:hover {
+    background-color: rgb(2, 71, 1);
+    color: black;
+}
+
+.conteúdo {
+    color: #c9b715;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.tio {
+    border: 0.5px solid #c9b715;
+    border-radius: 30px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.tio:hover {
+    background-color: rgb(2, 71, 1);
+    color: black;
+}
+ </style>   
+
+</head>
+<body>
+    <header style="
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #02450daa;
+  ">
+  <nav class="navbar">
+        <a href="index.html" class="logo">Star Wars</a>
+         <ul class="nav-menu">
+            <li class="nav-item" id="menu"> <a href="OrdemdosFIlmes.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                delete
+                </span>Não</a></li>
+             <li class="nav-item" id="menu"> <a href="personagens.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+             <li class="nav-item" id="menu"> <a href="https://twitter.com/i/status/1685046153291743232"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                star
+                </span>Surpresa</a></li>
+         </ul>
+           <div onclick="clicar()" id="punheti" class="Punheti">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </div>
+   </nav>
+  </header>
+
+<section  style="
+padding-top: 70px;"
+>  
+ <h1>A última esperança Jedi</h1>
+
+ <div class="foto">
+ <img src="https://listasnerds.com.br/wp-content/uploads/2021/11/Luke-Skywalker_DESTAQUE.png" alt="sky">
+ </div>
+
+ <p>Luke Skywalker é um dos Jedi mais lendários do universo de Star Wars. Após passar por parte de seu treinamento com o Mestre Yoda em Dagobah, Luke aprendeu a dominar a Força e foi uma peça fundamental na luta da Aliança Rebelde contra o Império de Darth Sidious (ou Palpatine para os íntimos) e Darth Vader. <br><br>
+
+    Ao lado de Leia Organa e Han Solo, Luke agiu para destruir a Estrela da Morte e participou de diversas investidas rebeldes para acabar com o governo totalitário que expandia suas garras pela galáxia.</p> <br><br>
+
+    <div class="conteúdo">
+        <ul>
+            <p style="font-size: 1.5rem;">Aparições</p>
+            <li class="tio">Star Wars Episódio IV</li>
+            <li class="tio">Star Wars Episódio V</li>
+            <li class="tio">Star Wars Episódio VI </li>
+            <li class="tio">Star Wars Episódio VIII </li>
+            <li class="tio">Star Wars Episódio IX </li>
+            <li class="tio">Star Wars Battlefront 1 e 2(jogos)</li>
+            <li class="tio">Mandaloriano(Série)</li>
+            <li class="tio">Livro de Bobba Fett (Série)</li>
+
+        </ul>
+    </div> 
+
+    <h2 style="
+    text-align: center;font-size: 2rem;
+    color: #014e01;">História</h2>
+
+    <p> Filho de Anakin Skywalker e Padmé, passando sua infância sem conhecer seus verdadeiros pais em Tatooine, Luke foi criado pelos tios, Owen e Beru, em uma espécie de fazenda no planeta desértico. O garoto passou grande parte de sua infância e adolescência sem saber quem eram seus pais verdadeiros e sem ter contato com a Força, apenas sonhando em algum dia poder ter uma vida mais interessante do que a que levava ali. <br><br>
+
+        Apesar das limitações de sua estadia em Tatooine, o jovem Skywalker sempre demonstrou, desde cedo, suas tendências aventurescas, algo que Owen tentava controlar por saber do histórico familiar do menino. Ainda assim, Luke desenvolveu uma forte ligação com naves espaciais, acreditando que seu pai tinha sido um piloto durante as <a style="color: #014e01;" href="episodio2.html">Guerras Clônicas.</p></a><br><br>
+
+        <div class="foto">
+            <img src="https://s1.abcstatics.com/media/play/2019/11/13/mark-hamill-carrie-fisher-harrison-k6m--510x287@abc.jpg" alt="pi">
+        </div>
+
+        <p>Nascido pouco tempo depois do início do governo tirânico do Império, Luke foi enviado para Tatooine depois que Padmé Amidala deu luz a ele e Leia, morrendo logo em seguida. As crianças foram frutos do relacionamento de Padmé com Anakin Skywalker, o nome de batismo de Darth Vader antes dele se voltar para o Lado Sombrio da Força. <br><br>
+
+        Enquanto Luke ficou sob responsabilidade de Obi-Wan Kenobi, Leia foi adotada pelo Senador Bail Organa. A separação só seria revertida anos depois, mesmo sem a dupla desconfiar, quando o Skywalker encontrou uma mensagem deixada pela Princesa com R2-D2, buscando a ajuda de Kenobi. O resto, como sempre, é história.</p><br><br>
+
+        <p>Mesmo sem saber, Luke Skywalker passou sua infância e juventude sendo vigiado de longe por Obi-Wan Kenobi. O Jedi se encarregou de cuidar do garoto depois dos dramáticos acontecimentos de Mustafar, onde lutou contra seu aprendiz, Anakin Skywalker, que tinha sido ludibriado pelo Lado Sombrio da Força. <br><br>
+
+            <div class="foto">
+                <img src="https://ocapacitor.com/wp-content/uploads/2017/12/Luke-Skywalker-Yoda-Dagobah.jpg" alt="cal">
+             </div>
+ 
+        <p>Dezenove anos depois, descobre que seu pai, Anakin Skywalker, foi um cavaleiro Jedi morto pelo terrível Darth Vader. Luke acaba perdendo seus tios, mortos por soldados imperiais, e acaba acompanhando Obi-Wan no resgate da Princesa Leia, contratando o piloto Han Solo e embarcando na nave Millenium Falcon, destruído mais tarde pela Estrela da Morte.
+
+        Luke destrói a Estrela da Morte unindo-se à Aliança Rebelde. Quando o grupo muda-se para o planeta gelado Hoth, Luke é atacado por um monstro de gelo. Quando recuperado, recebe uma mensagem do espírito de Obi-Wan chamando-o para o planeta Dagobah com o intuito de terminar seu treinamento Jedi com o Mestre Yoda. <br><br>
+
+        <div class= "foto">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/eec90825682623.56349252401f9.jpg" alt="">
+        </div>
+
+         <p>Quando Luke vai para o planeta Bespin e enfrenta Darth Vader, acaba descobrindo que o vilão é seu pai após decepar ter sua mão direita decepada. Luke recusa-se a acreditar, e quando Vader tenta levá-lo para o Lado Sombrio da Força, Luke joga-se num buraco. Lá ele é resgatado por Leia na Millenium Falcon. <br><br>
+
+         <p>O Mestre Yoda confirma a informação de que Darth Vader é Anakin Skywalker após Leia e Luke resgatarem Han Solo em Tatooine. Embora seu treinamento já tenha acabado, Luke ainda não é um Jedi. Yoda morre dizendo que existe outro Skywalker, o espírito de Obi-Wan aparece para Luke revelando que ele tem uma irmã gêmea chamada Leia. <br><br>
+
+            <div class="foto">
+                <img src="https://qph.cf2.quoracdn.net/main-qimg-72db5cf496ade1346234e58e10cb3bfc" alt="">
+            </div>
+
+        <p>Luke embarca numa missão para desligar o escudo da nova Estrela da Morte e tentar falar com seu pai. Darth Vader, no meio da batalha com Luke, diz que vai levar Leia para o Lado Sombrio da Força já que ele não irá. Luke Skywalker então corta a mão direita de Vader. <br><br>
+
+         O Imperador aparece e Luke se declara um Jedi. 
+        </p>
+
+        <p>O Imperador Palpatine, se irrita com a teimosia de Luke por permanecer no lado Jedi, e então decide mata-lo. Porém, Anakin Skywalker decide impedir seu mestre, o homem que destruiu sua vida, e salvar seu filho, sendo seu último ato como Jedi e não como sith, antes de morrer </p>
+
+        <h3 style="
+        text-align: center; color:#014e01; font-size: 2rem; margin-top: 50px;">Curiosidades</h3>
+
+        <div style="margin-top: 40px;" class="foto">
+            <img src="https://static.sky.it/images_static/cinema/2019/12/12/luke-skywalker-ultimi-jedi.jpg.transform/hero-mobile-2x/e574d9fe1d599960e252cbd3e9f119e0d6b9ee62/img.jpeg" alt="">
+        </div>
+
+        <h4 style="
+        text-align: center; color:#014e01; font-size: 1.5rem; margin-top: 20px;">"Starkiller"</h4>
+
+        <p>Nos primeiros rascunhos no roteiro de Star Wars, Luke não era um garoto simples um tanto caipira de Tatooine, e sim um general Jedi -- quase como um Obi-Wan e conselheiro de um rei. No segundo rascunho, ele se tornou um rapaz baixinho e gordinho de 18 anos chamado Luke Starkiller, enquanto um santo de milhares de anos antes seria conhecido como "o Skywalker". Seria essa a figura misteriosa que descobriu a Força e ajudou a fundar a República. Mas, eventualmente, George Lucas ficou com a versão fazendeira com sede de aventura do pequeno Jedi.</p><br><br>
+
+        <h5 style="
+        text-align: center; color:#014e01; font-size: 1.5rem; margin-top: 20px;">Ser um com a força</h5>
+
+        <p>
+            Luke Skywalker nunca vai morrer... bom, não seu Fantasma da Força, pelo menos. Assim como Obi-Wan, Yoda e ambas as versões de Anakin, Luke se tornou um com a Força eventualmente. Sim, isso é de acordo com o Universo expandido de Star Wars, que talvez não possa mais ser considerado, mas é uma informação que faz muito sentido para ser desconsiderada. E além, do mais, como todo mundo sabe, Mark Hamill é imortal também como outro personagem importante...</p>
+
+            <div class="foto">
+                <img src="https://pm1.aminoapps.com/6864/b6e8782698c3147f6e489a056f1d06893d085e70r1-780-439v2_uhq.jpg" alt="">
+            </div>
+
+               
+
+
+
+
+ <a href="personagens.html">
+    <p class="retorno" style="
+    font-size: 2rem;
+    text-align: center;">Voltar para tela de personagens</p>
+   </a>
+</section>
+</body>
+</html>

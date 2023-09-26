@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Han Solo e Chewbacca</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        html::-webkit-scrollbar {
+        width: 10px;
+        }
+        html::-webkit-scrollbar-thumb {
+        border-radius: 16px;
+        background: #99999988;
+        }
+        html::-webkit-scrollbar-thumb:active {
+        background: #999999;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+            background-color:rgb(0, 0, 22) 
+        }
+    
+    body {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: medium;
+    }
+    
+    h1 {
+        color: #c9b715;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header{
+        background-color: rgb(1, 1, 52);
+    }
+    
+    .navbar {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 34px;
+    }
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+    }
+    
+    .navbar img {
+        margin-top: 0px;
+        max-width:150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        padding: 0 34px;
+    }
+    
+    a {
+        color: #e5da0b;
+        text-decoration: none
+    }
+    
+    li {
+        list-style: none;
+    }
+    .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    }
+    .nav-link {
+        transition: 0.5s ease;
+    }
+    .nav-link:hover {
+        color: darkred;
+        text-decoration: underline;
+    text-shadow: 0.5px 0.4px #FFFFaa;
+    }
+    .Titulo1 {
+        text-align: center;
+        font-size: auto;
+        font-family: sans-serif;
+    }
+    
+    .bar {
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .Punheti {
+        display: none;
+        cursor: pointer;
+    }
+    
+    @media (max-width:768px){
+        .Punheti {
+            display: block;
+        }
+        .Punheti.active .bar:nth-child(2){
+         opacity: 0;
+        }
+        .Punheti.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .Punheti.active .bar:nth-child(3){
+            transform: translateY(8px) rotate(-45);
+        }
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            border-radius: 0 0 20px 20px;
+            background-color: rgb(1, 1, 52);
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .nav-item{
+            margin: 16px 0;
+        }
+        .nav-menu:active {
+           left: 0;
+        }
+    } 
+    
+    p {
+        color: #c9b715;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .foto img{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 600px;
+        margin: auto;
+        border: 3px solid #0f0249;
+        border-radius: 20px;
+    }
+
+    .tio {
+    border: 0.5px solid #c9b715;
+    border-radius: 30px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.tio:hover {
+    background-color: #0f0249;
+    color: black;
+}
+
+.conteúdo {
+    color: #c9b715;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.retorno{
+    transition: 0.7s;
+}
+
+.retorno:hover{
+    color: #0f0249;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px #FFFFaa;
+}
+ </style>   
+
+</head>
+<body>
+    <header style="
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #120245aa;
+  ">
+  <nav class="navbar">
+        <a href="index.html" class="logo">Star Wars</a>
+         <ul class="nav-menu">
+             <li class="nav-item" id="menu"> <a href="OrdemdosFIlmes.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                delete
+                </span>Não</a></li>
+             <li class="nav-item" id="menu"> <a href="personagens.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+             <li class="nav-item" id="menu"> <a href="https://twitter.com/i/status/1685046153291743232"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                star
+                </span>Surpresa</a></li>
+         </ul>
+           <div onclick="clicar()" id="punheti" class="Punheti">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </div>
+   </nav>
+  </header>
+    <hr>
+<section  style="
+padding-top: 60px;"
+> 
+
+<h1 style=" color: #0f0249; margin-top: 20px;font-size: 2rem;">A dupla perfeita</h1>
+
+<div class="foto">
+    <img src="https://static.globalnoticias.pt/storage/DN/2016/original/ng6157682.jpg" alt="">
+</div>
+
+<p>Han Solo era um contrabandista Humano do planeta Corellia. Seu melhor amigo e companheiro de primeira foi Chewbacca, um Wookiee de Kashyyyk, quem Solo apelidou de "Chewie". Solo pilotou um cargueiro personalizado, a Millennium Falcon, que tinha ganhado do colega Lando Calrissian. <br><br>
+
+    Solo e Chewbacca viriam a juntar-se à Aliança Rebelde depois de resgatar a Princesa Leia Organa de Alderaan da Estrela da Morte, uma estação de batalha construída pelo Império Galáctico capaz de destruir planetas inteiros, e auxiliando na destruição da mesma estação de batalha em um confronto mais tarde. Solo mais tarde se tornaria um General graças a seus esforços em uma série de batalhas da Aliança contra o Império Galáctico.</p> <br><br>
+   
+
+    <div class="conteúdo">
+        <ul>
+            <p style="font-size: 1.5rem;">Aparições</p>
+            <li class="tio">Star Wars Episódio IV (1977)</li>
+            <li class="tio">Star Wars Episódio V</li>
+            <li class="tio">Star Wars Episódio VI </li>
+            <li class="tio">Han Solo: Uma História Star Wars </li>
+            <li class="tio">Star Wars Episódio VII</li>
+            <li class="tio">Star Wars Episódio IX</li>
+            <li class="tio">Star Wars Battlefront 1 e 2(jogos)</li>
+        
+
+        </ul>
+    </div>
+
+
+    <h2 style="font-size: 1.5rem; color: #0f0249; text-align: center; margin-top: 15px;">Chewbacca</h2>
+
+    <div class="foto">
+        <img src="https://s.aficionados.com.br/imagens/chewie.jpg" alt="">
+    </div>
+
+    <p>Chewbacca (ou apenas Chewie, para os íntimos) nasceu na pacífica Kashyyyk, o planeta natal dos wookiees, espécie de alienígenas peludos e altos da qual Chewie é um membro. Ele nasceu cerca de cento e oitenta anos antes da Guerra dos Clones, ou seja, muito tempo antes dos acontecimentos do Episódio Um de Star Wars. <br><br>
+
+        Em Kashyyyk, Chewbacca levava uma vida normal de um wookiee. Possuía uma família, sendo casado com uma fêmea chamada Malla, com que teve um filho, nomeado Lumpawaroo.</p><br><br>
+
+        <p>Muitas atividades ilegais se beneficiaram do caos que se instava na galáxia durante a Guerra dos Clones, e Chewbacca foi uma das vítimas. O wookie foi capturado por uma guilda de caçadores trandoshanos que o levaram para a lua Wasskah, onde seria usado como alvo de uma caçada. Contudo, a padawan Ahsoka Tano também havia sido capturada e logo se aliou a Chewie. Graças a essa união de forças, os dois conseguiram escapar dos trandoshanos e voltar para seus lares.</p>
+
+        <div class="foto">
+            <img src="https://s.aficionados.com.br/imagens/escravidao.jpg" alt="">
+        </div>
+
+            <p>Kashyyyk, apesar de ser um mundo pacífico, não se manteve indiferente durante a Guerra dos Clones e apoiou as forças da República. De volta ao lar, Chewbacca esteve presente e ativo durante a Batalha de Kashyyyk, onde suas ações foram de extrema importância. Ajudou Yoda a escapar de Kashyyyk após o mestre jedi sobreviver a uma tentativa de assassinato pelas mãos dos clones que cumpriam a Ordem 66. <br><br>
+        
+            Muitas atividades ilegais se beneficiaram do caos que se instava na galáxia durante a Guerra dos Clones, e Chewbacca foi uma das vítimas. O wookie foi capturado por uma guilda de caçadores trandoshanos que o levaram para a lua Wasskah, onde seria usado como alvo de uma caçada. Contudo, a padawan Ahsoka Tano também havia sido capturada e logo se aliou a Chewie. Graças a essa união de forças, os dois conseguiram escapar dos trandoshanos e voltar para seus lares. <br><br>
+
+            Kashyyyk, apesar de ser um mundo pacífico, não se manteve indiferente durante a Guerra dos Clones e apoiou as forças da República. De volta ao lar, Chewbacca esteve presente e ativo durante a Batalha de Kashyyyk, onde suas ações foram de extrema importância. Ajudou Yoda a escapar de Kashyyyk após o mestre jedi sobreviver a uma tentativa de assassinato pelas mãos dos clones que cumpriam a Ordem 66.</p><br><br>
+
+            <h3 style="font-size: 1.5rem; color: #0f0249; text-align: center; margin-top: 15px;">Han Solo</h3>
+
+            <div class="foto">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/image_121e60c2.jpeg?region=230,0,1457,820&width=768" alt="">
+            </div>
+
+            <p>Han Solo nasceu no planeta Corellia, lugar famoso por seus ótimos pilotos e grande construtora de naves espaciais. Desde de cedo Han encarou as dificuldades de se viver na Galáxia, pois era uma criança pobre e órfã. Para poder sobreviver, ingressou na vida de crimes como um ladrão.</p>
+
+            <p>Então, certo dia, seu caminho cruzou com o de Han Solo, um jovem contrabandista. Sua primeira impressão do humano foi de ser um cara malandro, de fala rápida e arrogante, algo não muito positivo. No entanto, ficou feliz ao notar que por baixo da faixada de bandido, escondia um coração de ouro. Pois Han Solo foi o responsável por libertar Chewie da escravidão (os detalhes de como isso aconteceu devem estar presentes no filme Solo: Uma História Star Wars). <br><br>
+
+                Ao se ver liberto, Chewbacca jurou sua vida em fidelidade eterna a Han Solo. Passou a acompanhá-lo pela galáxia como um parceiro, também se tornando um contrabandista. Assim surgiu uma amizade que duraria por muitos anos. <br><br>
+
+                Em algum ponto de sua vida, Han Solo teve acesso a uma nave espacial e adquiriu habilidades de pilotagem. Assim começou sua carreira como contrabandista. Em uma de suas aventuras, Han encontrou o wookie Chewbacca, que estava sendo escravizado, e o ajudou a escapar. Chewbacca ficou extremamente grato por Han o ter salvado (embora Han diga que foi Chewie quem o salvou) e jurou lealdade ao contrabandista. Os dois se tronaram grandes amigos desde então.</p><br><br>
+
+            <div class="foto">
+                <img src="https://cinepop.com.br/wp-content/uploads/2019/02/millenium-falcon.jpg" alt="">
+            </div>
+
+            <p>Outro grande momento de sua vida foi quando encontrou Lando Calsrissian, também contrabandista, um grande apostador e autoproclamado empreendedor. Grande momento não por que isso resultaria em uma amizade (os dois nem são tão chegados assim), mas sim porque foi assim que Han Solo ganharia a nave Millennium Falcon. <br><br>
+
+                <p>Foi durante uma partida de Espinhos Corellianos, uma variação do jogo de cartas sabacc que usa dois dados de seis lados. Calrissian apostou a Millennium Falcon e a perdeu para Han. Como recordação dessa vitória, Han pendurou no console da nave os dois dados dourados usados na partida. <br><br>
+                
+                A Millenium Falcon é originalmente um cargueiro leve corelliano YT-1300f. Contudo, recebeu tantas modificações ao longo dos anos, que já não existe nada parecido com essa nave em toda a galáxia. Entre essas modificações se encontra um dos motores de hyperdrive mais rápidos de toda a galáxia, e também compartimentos secretps com tecnologia antidetecção, perfeitos para contrabando.<br><br>
+
+                Han Solo e Chewie viveram muitas aventuras a bordo da Millenium Falcon. Uma dessas aventuras foi uma vingança contra um senhor do crime organizado do planeta Stenness, que tinha como hábito enganar contrabandistas. O plano consistia em roubar os cofres desse criminoso e, para acobertar a operação, um casamento simulado entre Han Solo e a contrabandista Sana Starros. No fim, Han conseguiu se vingar e ainda fugiu do planeta com a parte nos lucros que seria de Sana. Apenas derrotou um inimigo para conseguir outro.</p> <br><br>
+
+                <div class="foto">
+                    <img src="https://www.tvpop.com.br/wp-content/uploads/2022/05/han-solo-uma-historia-star-wars-domingo-maior-foto-reproducao-tvpop.jpg" alt="">
+                </div>
+
+                <p>Outra aventura foi quando Han foi forçado a atravessar Monsua, uma nebulosa coberta por ciclones e gigantescas tempestades elétricas. Em decorrência disso, Han teve que fazer um pouso de emergência em um planeta não mapeado dentro dessa nebulosa. O planeta mostrou ser um lugar lindo e passou a ser usado pela dupla de contrabandistas como um esconderijo secreto e um depósito de vinho corelliano. <br><br>
+
+                A vida de contrabandista fez com que Han Solo cruzasse o caminho de alguns indivíduos perversos. É o caso do criminoso Jabba, o Hutt, senhor do crime do planeta Tatooine. Han e Chewie adquiriram uma dívida com Jabba após um contrabando que deu errado. Para levantar o dinheiro que precisava pagar ao Hutt, Han começou a fazer contrabandos no planeta Kessel. Foi nesse momento que ele quebrou o recorde da rota de Kessel, fazendo o percurso em 12 parsecs(O parsec era uma unidade de distância astronômica equivalente a cerca de 19 trilhões de milhas (3 anos-luz)).</p> <br><br>
+
+                <div class="foto">
+                    <img src="https://img01.imgsinemalar.com/images/list/34193/items/-36860431471526894698.jpg" alt="">
+                </div>
+
+                <p>Ainda em busca de fazer dinheiro para pagar sua dívida, Han Solo aceitou um trabalho incomum. Iria transportar até o sistema de Alderaan o velho <a style="color:#014e01 ;" href="KenobiPerfeito.html">Ben Kenobi</a>, Luke Skywalker e os droides C-3PO e R2D2. Mal sabia Han, mas esse seria o começo de seu envolvimento com a Aliança Rebelde e sua causa de restaurar a democracia à Galáxia. Ao lado desses novos aliados, Han ajudou no resgate da princesa Leia Organa e teve uma participação crucial na batalha que resultou na destruição da primeira Estrela da Morte. <br><br>
+
+                    Após essa batalha, foi condecorado por suas ações e então passou a agir mais ativamente pela Aliança Rebelde. Quando o Império descobriu a base da Aliança no planeta Hoth, os rebeldes foram forçados a evacuar, entre eles Han, que fugiu com Leia para a Cidade nas Nuvens de Bespin. Lá foi recebido pelo seu antigo conhecido Lando Clarissian, mas eventualmente caiu em uma armadilha do Império. <br><br>
+                    
+                    Foi capturado e congelado em carbonita por <a style="color:#480101 ;" href="DarthVaderbolado.html">Darth Vader</a>. Depois, foi entregado diretamente para Jabba pelo caçador de recompensas Boba Fett. Ficou exposto na parede de Jabba como um troféu por alguns meses, período que acabou graças a missão de resgate de seus amigos. <br><br>
+                    
+                    Ao retornar à Aliança Rebelde, Han Solo recebeu a patente de general e comandou um pelotão de ataque rebelde na lua florestal de Endor. Sua missão era desativar os escudos que protegiam a construção da segunda Estrela da Morte.</p> <br><br>
+
+                    <div class="foto">
+                        <img src="https://cloudfront-ap-southeast-2.images.arcpublishing.com/nzme/5ORXCSTZ3KZP2V4DLILEXAI6TQ.jpg" alt="">
+                    </div>
+
+                    <p>Após a queda do Império, Han Solo abandonou sua vida de contrabandista e assumiu um compromisso sério com <a style="color: #0f0249;" href="Leiabolada.html">Leia Organa</a>. Os dois tiveram um bom casamento, resultando no nascimento de um filho, Ben Solo. Tudo em sua vida parecia que tinha dado certo</p><br><br><br><br>
+
+
+
+                <a href="personagens.html">
+                    <p class="retorno" style="
+                    font-size: 2rem;
+                    text-align: center;">Voltar para tela de personagens</p>
+                   </a>
+
+                   
+</section>
+</body>
+</html>

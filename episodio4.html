@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Nova Esperança</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+        html::-webkit-scrollbar {
+        width: 10px;
+        }
+        html::-webkit-scrollbar-thumb {
+        border-radius: 16px;
+        background: #99999988;
+        }
+        html::-webkit-scrollbar-thumb:active {
+        background: #999999;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+            background-color:rgb(0, 0, 22) 
+        }
+    
+    body {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: medium;
+    }
+    
+    h1 {
+        color: #c9b715;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header{
+        background-color: rgb(1, 1, 52);
+    }
+    
+    .navbar {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 34px;
+    }
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+    }
+    
+    .navbar img {
+        margin-top: 0px;
+        max-width:150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        padding: 0 34px;
+    }
+    
+    a {
+        color: #e5da0b;
+        text-decoration: none
+    }
+    
+    li {
+        list-style: none;
+    }
+    .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    }
+    .nav-link {
+        transition: 0.5s ease;
+    }
+    .nav-link:hover {
+        color: darkred;
+        text-decoration: underline;
+    text-shadow: 0.5px 0.4px #FFFFaa;
+    }
+    .Titulo1 {
+        text-align: center;
+        font-size: auto;
+        font-family: sans-serif;
+    }
+    
+    .bar {
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .Punheti {
+        display: none;
+        cursor: pointer;
+    }
+    
+    @media (max-width:768px){
+        .Punheti {
+            display: block;
+        }
+        .Punheti.active .bar:nth-child(2){
+         opacity: 0;
+        }
+        .Punheti.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .Punheti.active .bar:nth-child(3){
+            transform: translateY(8px) rotate(-45);
+        }
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            border-radius: 0 0 20px 20px;
+            background-color: rgb(1, 1, 52);
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .nav-item{
+            margin: 16px 0;
+        }
+        .nav-menu:active {
+           left: 0;
+        }
+    } 
+    
+    p {
+        color: #c9b715;
+        font-size: 22px;
+        padding: 10px;
+    }
+    .retorno{
+    transition: 0.5s;
+    text-align: center;
+}
+
+.foto img{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 700px;
+        margin: auto;
+        border: 3px solid #0f0249;
+        border-radius: 20px;
+    }
+
+.retorno:hover{
+    color: #4e0101;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px #FFFFaa;
+}
+
+video {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        border: 1px solid #4e0101;
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+ </style>   
+
+</head>
+<body>
+    <header style="
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #02450daa;
+  ">
+  <nav class="navbar">
+        <a href="index.html" class="logo">Star Wars</a>
+         <ul class="nav-menu">
+            <li class="nav-item" id="menu"> <a href="OrdemdosFIlmes.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                delete
+                </span>Não</a></li>
+             <li class="nav-item" id="menu"> <a href="personagens.html"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+             <li class="nav-item" id="menu"> <a href="https://twitter.com/i/status/1685046153291743232"  target="_blank" rel="external" class="nav-link"><span class="material-symbols-outlined">
+                star
+                </span>Surpresa</a></li>
+         </ul>
+           <div onclick="clicar()" id="punheti" class="Punheti">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </div>
+   </nav>
+  </header>
+  
+<section  style="
+padding-top: 60px;"
+> 
+
+<h1 style="color: blue; text-align: center; font-size: 2rem;">Uma Nova Esperança(Razoável)</h1>
+
+<div class="foto">
+    <img src="https://1.bp.blogspot.com/-zn8IyLERJ88/YKpL6ZBiUeI/AAAAAAAAEy8/Ky_PLT9ltvkkrRykH7w1Jc4WYB5ttco7gCLcBGAsYHQ/s620/Capa.jpg" alt="">
+</div>
+
+<p> história do Episódio IV se passa 19 anos, após os eventos ocorridos em Star Wars Episódio III: A Vingança dos Sith, depois da queda da República Galáctica e o extermínio dos Jedi, o filme acompanha a jornada de Luke Skywalker, que compra dois droides, C-3PO e R2-D2, que este tenha informações da Leia Organa, que recebe esta mensagem destinada a Obi-Wan Kenobi e Luke se lembra de Ben Kenobi, um ermitão que vive nas montanhas.</p>
+
+<p>Dezenove anos após os eventos de Vingança dos Sith, o Império Galáctico sob a liderança de Imperador Palpatine controla a Galáxia com força. O Império não funciona sem sua resistência, de qualquer forma. O Tantive IV está carregando uma informação preciosa, vital para a Aliança Rebelde. Mas Darth Vader, Lorde Negro dos Sith e seu mestre suspeitavam há um bom tempo das suas lealdades, e sua nave é interceptada por seu Destróier Estelar classe Imperial, o Devastator, e é invadido pelos stormtroopers de Vader. Antes de sua captura, Leia coloca informações vitais na base de dados de R2-D2. R2-D2 e C-3PO escapam em um pod de emergência, e caem no planeta remoto e deserto de Tatooine. R2-D2 e C-3PO são "recuperados" por Jawas após terem sido separados.</p>
+
+<div class="foto">
+    <img src="https://www.gamespot.com/a/uploads/screen_kubrick/1578/15789737/3311632-swdroids.jpg" alt="">
+</div>
+
+<p>Os droides são comprados pelo fazendeiro de umidade Owen Lars e seu sobrinho, Luke Skywalker. R2-D2 escapa da casa de Lars na procura de um Obi-Wan Kenobi, quem o droide dizia ser o proprietário. Luke e C-3PO acham R2 no dia seguinte um pouco antes de serem atacados pelo Povo da Areia. Luke e seus droides são salvos por Obi-Wan Kenobi ou, como Luke o conhece, Ben Kenobi. Obi-Wan leva Luke para sua casa.
+
+    <div class="foto">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/image_67829ec9.jpeg" alt="">
+    </div>
+
+<p>Luke recebe o sabre de luz de seu pai, com Obi-Wan relembrando sua antiga amizade com o pai de Luke. Luke fica sabendo que um lorde Sith chamado Darth Vader traiu e matou seu pai. Após descobrir a mensagem de Princesa Leia carregada por R2-D2, Obi-Wan tenta convencer Luke a acompanhá-lo à Alderaan, mas Luke se recusa a ir até descobrir que seu tio e tia foram mortos brutalmente por stormtroopers enquanto procuravam pelos droides. Luke, Obi-Wan, e os dois droides viajam até Mos Eisley para achar passagem para Alderaan, o planeta natal de Princesa Leia.
+
+<p>   Por 17.000 créditos, o contrabandista Han Solo e seu co-piloto Chewbacca concordaram em levar os quatro para Alderaan a bordo de sua nave, o Millennium Falcon. Após pequenas brigas com o Império e Jabba o Hutt, a Falcon escapa do Bloqueio Imperial em Mos Eisley e Han coloca o curso para Alderaan.
+
+    <div class="foto">
+        <img src="https://cdn.ome.lt/ieFfrgjrCMFcDCSMv9_B9TGqZbI=/1200x630/smart/extras/conteudos/Death-Star-I-copy_36ad2500.jpeg" alt="">
+    </div>
+
+    <p>  No lugar de Alderaan, eles encontram o que parece ser um campo de asteróides. O planeta foi destruído pela Estrela da Morte, sob as ordens de Grande Moff Tarkin, para dar um exemplo de poder do Império. O Millennium Falcon é puxado pela Estrela da Morte pelo forte raio trator.
+
+        <div class="foto">
+            <img src="https://static.wikia.nocookie.net/ptstarwars/images/3/3e/Han_luke_stormarmor.png/revision/latest?cb=20160203162017" alt="">
+        </div>
+
+        <p>   De compartimentos escondidos para contrabandismo, a tripulação do Millennium Falcon armou uma armadilha para dois stormtroopers. Com Han e Luke desfarçados como os dois stormtroopers, o grupo começa a planejar um modo de escapar. Obi-Wan Kenobi se separa do grupo para desativar o raio trator, deixando os outros sozinhos. Como estava conectado à Rede Imperial, R2-D2 descobre que Princesa Leia está a bordo da estação. Luke convence Han e Chewbacca para resgatar a princesa com a promessa de uma recompensa grande. Han e Chewie relutantemente concordam. Luke planeja marchar até o Bloco de Detenção AA 23, dizendo que Chewie é parte de uma transferência de prisioneiros. C-3PO e R2-D2 são instruídos para ficarem onde estão, e o trio vai para a tentativa de resgate. Os planos de Luke funcionam perfeitamente até que eles conseguem chegar à cela da Princesa. Infelizmente, ninguém pensou no plano de fuga, e Leia faz um buraco no chão e pula, enquanto Han e Luke seguravam o esquadrão de stormtroopers. Chewie, Luke e Han todos pularam com a princesa no buraco.
+
+            <p>Infelizmente, eles foram parar em um compactador de lixo que também era a casa de um dianoga. Após caírem, a criatura puxa Luke para a água, mas ela solta Luke e corre com medo quando os Imperiais percebem para onde os heróis foram, eles ativam o compactador. Enquanto as paredes vão fechando no quarteto, Luke chama C-3PO desesperadamente em seu comlink pedindo para desativar o compactador. R2-D2 consegue desativá-lo bem na hora, mas, devido aos gritos de alegria que C-3PO ouve no comlink, C-3PO por um momento se convence que seu mestre e amigos foram esmagados.
+
+                <p> Após escaparem do compactador de lixo, o grupo corre para o Millennium Falcon, esperando que Obi-Wan tenha conseguido desativado o raio trator. Eles encontram stormtroopers no caminho para a nave.
+
+                    <div class="foto">
+                        <img src="https://sm.ign.com/ign_br/screenshot/default/7xwwebrafcx2xwmzcsdvmn_83yj.jpg" alt="">
+                    </div>
+
+                    <p> Obi-Wan, por outro lado, estava destinado a se encontrar com Darth Vader. Obi-Wan batalha com seu ex-Padawan, mas dessa vez Obi-Wan se sacrifica (na verdade, foi revelado depois que Obi-Wan não deixou Vader o matar, mas ao invés, se juntou à Força antes de ser morto para evitar a morte) com Luke assistindo. Horrorizado e enraivado, Luke dá seus últimos tiros nos stormtroopers e volta para o Millennium Falcon.
+
+                        <p> Após lutar com um esquadrão de Caças TIE, o Millennium Falcon se encontra com a Aliança Rebelde em Yavin 4, e a informação em R2-D2 é dada. General Dodonna planeja o ataque na Estrela da Morte, um ataque tão audacioso que recebeu reação não entusiática, notavelmente de Wedge Antilles. Para a maior tristeza de Luke, Han vai embora após receber sua recompensa.
+
+                            <div class="foto">
+                                <img src="https://gamehall.com.br/wp-content/uploads/2016/09/Luke-Skywalker.jpg" alt="">
+                            </div>
+
+                            <p>  A força Rebelde começa seu ataque na Estrela da Morte, enquanto a estação espacial se aproximava mais da base Rebelde em Yavin 4. As últimas naves Rebeldes entram na trincheira para acertar o alvo que destruirá a Estrela da Morte. Um deles é pilotado por Biggs Darklighter, um dos amigos de Luke que é morto por Vader pelo final do ataque. A maioria das naves Rebeldes são destruídas, exceto o X-wing de Luke Skywalker. Um pouco antes que Darth Vader pudesse destruir Luke de seu Caça TIE Avançado pessoal, Han volta no Millennium Falcon e sai abrindo caminho entre os caças Imperiais. Luke atira dois torpedos próton na porta de escapamento, e a Estrela da Morte é destruída.
+
+                                <p>As naves restantes (as de Wedge, Luke, Han, e Keyan Farlander, um piloto de Y-wing) retornam para Yavin 4 e uma celebração de vitória começa, com medalhas para os heróis, Han Solo e Luke Skywalker.</p>
+
+
+
+
+<a href="OrdemdosFIlmes.html">
+    <p class="retorno" style="
+    font-size: 2rem;
+    text-align: center;">Voltar para tela da História</p>
+    <a href="episodio5.html">
+        <p class="retorno" style="
+        font-size: 2rem;
+        text-align: center;">Avançar história</p>
+   </a>
+
+</section>
+</body>
+</html>
